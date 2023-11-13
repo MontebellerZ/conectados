@@ -1,0 +1,1607 @@
+[
+    {
+        "group": "Frutas",
+        "words": ["Banana", "Maçã", "Laranja", "Abacaxi"]
+    },
+    {
+        "group": "Animais",
+        "words": ["Cachorro", "Gato", "Pássaro", "Peixe"]
+    },
+    {
+        "group": "Cidades",
+        "words": ["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasília"]
+    },
+    {
+        "group": "Comidas",
+        "words": ["Arroz", "Feijão", "Carne", "Salada"]
+    },
+    {
+        "group": "Elementos químicos",
+        "words": ["Carbono", "Oxigênio", "Hidrogênio", "Nitrogênio"]
+    },
+    {
+        "group": "Esportes",
+        "words": ["Futebol", "Basquete", "Vôlei", "Tênis"]
+    },
+    {
+        "group": "Estações do ano",
+        "words": ["Primavera", "Verão", "Outono", "Inverno"]
+    },
+    {
+        "group": "Flores",
+        "words": ["Rosa", "Margarida", "Orquídea", "Girassol"]
+    },
+    {
+        "group": "Instrumentos de escrita",
+        "words": ["Caneta", "Lápis", "Borracha", "Apontador"]
+    },
+    {
+        "group": "Instrumentos musicais",
+        "words": ["Violão", "Piano", "Bateria", "Baixo"]
+    },
+    {
+        "group": "Marcas de carro",
+        "words": ["Chevrolet", "Ford", "Fiat", "Volkswagen"]
+    },
+    {
+        "group": "Materiais escolares",
+        "words": ["Caderno", "Livro", "Caneta", "Lápis"]
+    },
+    {
+        "group": "Números",
+        "words": ["Um", "Dois", "Três", "Quatro"]
+    },
+    {
+        "group": "Países",
+        "words": ["Brasil", "Estados Unidos", "França", "Japão"]
+    },
+    {
+        "group": "Partes do corpo",
+        "words": ["Cabeça", "Braço", "Perna", "Mão"]
+    },
+    {
+        "group": "Pecados capitais",
+        "words": ["Ira", "Gula", "Luxúria", "Inveja"]
+    },
+    {
+        "group": "Planetas",
+        "words": ["Mercúrio", "Vênus", "Terra", "Marte"]
+    },
+    {
+        "group": "Profissões artísticas",
+        "words": ["Ator", "Dançarino", "Cantor", "Escritor"]
+    },
+    {
+        "group": "Séries de TV",
+        "words": ["Friends", "Game of Thrones", "Breaking Bad", "The Office"]
+    },
+    {
+        "group": "Sistemas operacionais",
+        "words": ["Windows", "Linux", "MacOS", "Android"]
+    },
+    {
+        "group": "Sobremesas",
+        "words": ["Sorvete", "Bolo", "Pudim", "Chocolate"]
+    },
+    {
+        "group": "Tipos de arte",
+        "words": ["Pintura", "Escultura", "Fotografia", "Gravura"]
+    },
+    {
+        "group": "Tipos de bebida",
+        "words": ["Água", "Suco", "Refrigerante", "Cerveja"]
+    },
+    {
+        "group": "Tipos de bebida alcoólica",
+        "words": ["Cerveja", "Vinho", "Vodka", "Whisky"]
+    },
+    {
+        "group": "Tipos de biscoito",
+        "words": ["Água e Sal", "Maizena", "Recheado", "Cream Cracker"]
+    },
+    {
+        "group": "Tipos de carne",
+        "words": ["Bovina", "Suína", "Frango", "Peixe"]
+    },
+    {
+        "group": "Tipos de chocolate",
+        "words": ["Ao Leite", "Amargo", "Branco", "Meio Amargo"]
+    },
+    {
+        "group": "Tipos de clima",
+        "words": ["Chuvoso", "Ensolarado", "Nublado", "Ventoso"]
+    },
+    {
+        "group": "Tipos de clube",
+        "words": ["Esportivo", "Social", "Cultural", "Recreativo"]
+    },
+    {
+        "group": "Tipos de clube de futebol",
+        "words": ["Flamengo", "Corinthians", "Palmeiras", "São Paulo"]
+    },
+    {
+        "group": "Tipos de comida italiana",
+        "words": ["Pizza", "Lasanha", "Spaghetti", "Ravioli"]
+    },
+    {
+        "group": "Tipos de comida japonesa",
+        "words": ["Sushi", "Sashimi", "Yakissoba", "Temaki"]
+    },
+    {
+        "group": "Tipos de comida mexicana",
+        "words": ["Tacos", "Burritos", "Nachos", "Guacamole"]
+    },
+    {
+        "group": "Tipos de comida vegetariana",
+        "words": ["Soja", "Grão de Bico", "Lentilha", "Tofu"]
+    },
+    {
+        "group": "Tipos de dança",
+        "words": ["Samba", "Forró", "Tango", "Hip Hop"]
+    },
+    {
+        "group": "Tipos de doce",
+        "words": ["Brigadeiro", "Beijinho", "Cajuzinho", "Olho de Sogra"]
+    },
+    {
+        "group": "Tipos de esporte",
+        "words": ["Individual", "Coletivo", "Aquático", "Radicais"]
+    },
+    {
+        "group": "Tipos de esporte olímpico",
+        "words": ["Atletismo", "Natação", "Ginástica", "Vôlei"]
+    },
+    {
+        "group": "Tipos de filme",
+        "words": ["Ação", "Comédia", "Drama", "Terror"]
+    },
+    {
+        "group": "Tipos de floresta",
+        "words": ["Amazônica", "Mata Atlântica", "Cerrado", "Caatinga"]
+    },
+    {
+        "group": "Tipos de fruta",
+        "words": ["Morango", "Uva", "Manga", "Kiwi"]
+    },
+    {
+        "group": "Tipos de frutos do mar",
+        "words": ["Camarão", "Peixe", "Polvo", "Lagosta"]
+    },
+    {
+        "group": "Tipos de instrumento de sopro",
+        "words": ["Flauta", "Saxofone", "Trompete", "Clarinete"]
+    },
+    {
+        "group": "Tipos de jogo",
+        "words": ["Tabuleiro", "Cartas", "Esportivo", "Eletrônico"]
+    },
+    {
+        "group": "Tipos de legume",
+        "words": ["Abóbora", "Batata", "Cenoura", "Ervilha"]
+    },
+    {
+        "group": "Tipos de literatura",
+        "words": ["Romance", "Ficção Científica", "Poesia", "Biografia"]
+    },
+    {
+        "group": "Tipos de música",
+        "words": ["Rock", "Pop", "Sertanejo", "Eletrônica"]
+    },
+    {
+        "group": "Tipos de música brasileira",
+        "words": ["Samba", "Bossa Nova", "MPB", "Forró"]
+    },
+    {
+        "group": "Tipos de música clássica",
+        "words": ["Sinfonia", "Concerto", "Ópera", "Balé"]
+    },
+    {
+        "group": "Tipos de música internacional",
+        "words": ["Pop", "Rock", "Eletrônica", "Hip Hop"]
+    },
+    {
+        "group": "Tipos de objeto de cozinha",
+        "words": ["Panela", "Frigideira", "Faca", "Colher"]
+    },
+    {
+        "group": "Tipos de objeto de decoração",
+        "words": ["Vaso", "Quadro", "Tapete", "Almofada"]
+    },
+    {
+        "group": "Tipos de objeto de escritório",
+        "words": ["Mesa", "Cadeira", "Computador", "Impressora"]
+    },
+    {
+        "group": "Tipos de objeto de limpeza",
+        "words": ["Vassoura", "Rodo", "Esponja", "Detergente"]
+    },
+    {
+        "group": "Tipos de objeto de vestuário",
+        "words": ["Camiseta", "Bermuda", "Vestido", "Saia"]
+    },
+    {
+        "group": "Tipos de pão",
+        "words": ["Francês", "Integral", "Pão de Forma", "Pão de Queijo"]
+    },
+    {
+        "group": "Tipos de peça de roupa",
+        "words": ["Manga Longa", "Manga Curta", "Gola Alta", "Gola V"]
+    },
+    {
+        "group": "Tipos de peixe",
+        "words": ["Salmão", "Tilápia", "Bacalhau", "Atum"]
+    },
+    {
+        "group": "Tipos de profissão",
+        "words": ["Médico", "Advogado", "Professor", "Engenheiro"]
+    },
+    {
+        "group": "Tipos de queijo",
+        "words": ["Mussarela", "Prato", "Gorgonzola", "Parmesão"]
+    },
+    {
+        "group": "Tipos de queijo brasileiro",
+        "words": ["Minas", "Prato", "Coalho", "Mussarela"]
+    },
+    {
+        "group": "Tipos de queijo italiano",
+        "words": ["Parmesão", "Gorgonzola", "Provolone", "Ricota"]
+    },
+    {
+        "group": "Tipos de religião",
+        "words": ["Cristianismo", "Islamismo", "Judaísmo", "Hinduísmo"]
+    },
+    {
+        "group": "Tipos de sapato",
+        "words": ["Tênis", "Sandália", "Bota", "Chinelo"]
+    },
+    {
+        "group": "Tipos de sobremesa gelada",
+        "words": ["Sorvete", "Açaí", "Gelatina", "Mousse"]
+    },
+    {
+        "group": "Tipos de sobremesa quente",
+        "words": ["Pudim", "Petit Gateau", "Brownie", "Churros"]
+    },
+    {
+        "group": "Tipos de tempero",
+        "words": ["Sal", "Pimenta", "Orégano", "Alecrim"]
+    },
+    {
+        "group": "Tipos de transporte",
+        "words": ["Carro", "Ônibus", "Avião", "Trem"]
+    },
+    {
+        "group": "Tipos de transporte de carga",
+        "words": ["Caminhão", "Navio", "Avião", "Trem"]
+    },
+    {
+        "group": "Tipos de transporte de passageiros",
+        "words": ["Ônibus", "Metrô", "Táxi", "Uber"]
+    },
+    {
+        "group": "Tipos de transporte público",
+        "words": ["Metrô", "Ônibus", "Trem", "BRT"]
+    },
+    {
+        "group": "Tipos de utensílio de cozinha",
+        "words": ["Escumadeira", "Concha", "Pegador", "Espátula"]
+    },
+    {
+        "group": "Tipos de vegetação",
+        "words": ["Floresta", "Savana", "Deserto", "Tundra"]
+    },
+    {
+        "group": "Tipos de verdura",
+        "words": ["Alface", "Couve", "Espinafre", "Rúcula"]
+    },
+    {
+        "group": "Tipos de vestuário",
+        "words": ["Camisa", "Calça", "Sapato", "Casaco"]
+    },
+    {
+        "group": "Tipos de vinho",
+        "words": ["Tinto", "Branco", "Rosé", "Espumante"]
+    },
+    {
+        "group": "Tipos de vinho branco",
+        "words": ["Chardonnay", "Sauvignon Blanc", "Riesling", "Pinot Grigio"]
+    },
+    {
+        "group": "Tipos de vinho rosé",
+        "words": ["Cabernet Franc", "Merlot", "Pinot Noir", "Syrah"]
+    },
+    {
+        "group": "Tipos de vinho tinto",
+        "words": ["Cabernet Sauvignon", "Merlot", "Pinot Noir", "Syrah"]
+    },
+    {
+        "group": "Tipos de vinho tinto seco",
+        "words": ["Cabernet Sauvignon", "Merlot", "Pinot Noir", "Syrah"]
+    },
+    {
+        "group": "Tipos de vinho tinto suave",
+        "words": ["Lambrusco", "Moscatel", "Suave", "Tinto de Mesa"]
+    },
+    {
+        "group": "Frutas Tropicais",
+        "words": ["Abacaxi", "Manga", "Coco", "Banana"]
+    },
+    {
+        "group": "Esportes Aquáticos",
+        "words": ["Natação", "Mergulho", "Canoagem", "Surfe"]
+    },
+    {
+        "group": "Países Europeus",
+        "words": ["França", "Alemanha", "Espanha", "Itália"]
+    },
+    {
+        "group": "Ferramentas de Construção",
+        "words": ["Martelo", "Serra", "Pregos", "Parafusos"]
+    },
+    {
+        "group": "Meios de Transporte",
+        "words": ["Carro", "Bicicleta", "Avião", "Barco"]
+    },
+    {
+        "group": "Animais Domésticos",
+        "words": ["Cachorro", "Gato", "Peixe", "Pássaro"]
+    },
+    {
+        "group": "Planetas do Sistema Solar",
+        "words": ["Marte", "Júpiter", "Saturno", "Urano"]
+    },
+    {
+        "group": "Estilos de Dança",
+        "words": ["Salsa", "Ballet", "Hip-hop", "Tango"]
+    },
+    {
+        "group": "Partes do Corpo Humano",
+        "words": ["Cabeça", "Braço", "Perna", "Peito"]
+    },
+    {
+        "group": "Gêneros Literários",
+        "words": ["Romance", "Poesia", "Ficção", "Drama"]
+    },
+    {
+        "group": "Doces Tradicionais",
+        "words": ["Brigadeiro", "Beijinho", "Cocada", "Quindim"]
+    },
+    {
+        "group": "Meios de Comunicação",
+        "words": ["Rádio", "Televisão", "Jornal", "Internet"]
+    },
+    {
+        "group": "Continentes",
+        "words": ["África", "Ásia", "América", "Europa"]
+    },
+    {
+        "group": "Estilos de Arquitetura",
+        "words": ["Gótico", "Renascentista", "Moderno", "Contemporâneo"]
+    },
+    {
+        "group": "Jogos de Tabuleiro",
+        "words": ["Xadrez", "Damas", "Banco Imobiliário", "Uno"]
+    },
+    {
+        "group": "Rios Famosos",
+        "words": ["Amazonas", "Nilo", "Mississipi", "Yangtzé"]
+    },
+    {
+        "group": "Coquetéis",
+        "words": ["Mojito", "Margarita", "Caipirinha", "Martini"]
+    },
+    {
+        "group": "Direções Cardeais",
+        "words": ["Norte", "Sul", "Leste", "Oeste"]
+    },
+    {
+        "group": "Elementos Naturais",
+        "words": ["Fogo", "Terra", "Ar", "Água"]
+    },
+    {
+        "group": "Ferramentas de Cozinha",
+        "words": ["Faca", "Panela", "Colher", "Garfo"]
+    },
+    {
+        "group": "Softwares de Edição",
+        "words": ["Photoshop", "Illustrator", "Premiere", "After Effects"]
+    },
+    {
+        "group": "Escritores Clássicos",
+        "words": ["Shakespeare", "Dante", "Austen", "Tolstói"]
+    },
+    {
+        "group": "Constelações",
+        "words": ["Órion", "Ursa Maior", "Cruzeiro do Sul", "Andrômeda"]
+    },
+    {
+        "group": "Instrumentos de Percussão",
+        "words": ["Tambor", "Bongô", "Triângulo", "Pandeiro"]
+    },
+    {
+        "group": "Sobremesas Geladas",
+        "words": ["Sorvete", "Gelatina", "Milkshake", "Pudim"]
+    },
+    {
+        "group": "Estilos de Moda",
+        "words": ["Vintage", "Casual", "Elegante", "Esportivo"]
+    },
+    {
+        "group": "Elementos de Um Jardim",
+        "words": ["Flores", "Grama", "Árvores", "Canteiros"]
+    },
+    {
+        "group": "Gêneros Cinematográficos",
+        "words": ["Ação", "Comédia", "Drama", "Ficção Científica"]
+    },
+    {
+        "group": "Países da América Latina",
+        "words": ["Brasil", "Argentina", "México", "Chile"]
+    },
+    {
+        "group": "Personagens de Contos de Fadas",
+        "words": ["Cinderela", "Branca de Neve", "Rapunzel", "Chapeuzinho Vermelho"]
+    },
+    {
+        "group": "Cores Primárias",
+        "words": ["Vermelho", "Azul", "Amarelo", "Verde"]
+    },
+    {
+        "group": "Esportes de Inverno",
+        "words": ["Esqui", "Snowboard", "Patinação no Gelo", "Biatlo"]
+    },
+    {
+        "group": "Elementos de um Celular",
+        "words": ["Tela", "Bateria", "Câmera", "Processador"]
+    },
+    {
+        "group": "Produtos de Limpeza",
+        "words": ["Sabão", "Detergente", "Desinfetante", "Esponja"]
+    },
+    {
+        "group": "Peças de Vestuário",
+        "words": ["Camiseta", "Calça", "Sapato", "Chapéu"]
+    },
+    {
+        "group": "Sopas Tradicionais",
+        "words": ["Canja", "Minestrone", "Caldo Verde", "Sopa de Cebola"]
+    },
+    {
+        "group": "Estilos de Café",
+        "words": ["Espresso", "Cappuccino", "Latte", "Americano"]
+    },
+    {
+        "group": "Esportes Olímpicos",
+        "words": ["Atletismo", "Natação", "Ginástica", "Judô"]
+    },
+    {
+        "group": "Disciplinas Acadêmicas",
+        "words": ["Matemática", "História", "Biologia", "Química"]
+    },
+    {
+        "group": "Marcas de Telefonia",
+        "words": ["Apple", "Samsung", "Huawei", "Motorola"]
+    },
+    {
+        "group": "Feriados Nacionais",
+        "words": ["Natal", "Páscoa", "Independência", "Carnaval"]
+    },
+    {
+        "group": "Gêneros Musicais",
+        "words": ["Rock", "Pop", "Jazz", "Hip-hop"]
+    },
+    {
+        "group": "Filmes de Ficção Científica",
+        "words": ["Star Wars", "Blade Runner", "Matrix", "Interstellar"]
+    },
+    {
+        "group": "Materiais de Arte",
+        "words": ["Tinta", "Pincel", "Canvas", "Aquarela"]
+    },
+    {
+        "group": "Cidades Globais",
+        "words": ["Nova York", "Londres", "Tóquio", "Paris"]
+    },
+    {
+        "group": "Termos Literários",
+        "words": ["Protagonista", "Antagonista", "Enredo", "Desfecho"]
+    },
+    {
+        "group": "Elementos da Tabela Periódica",
+        "words": ["Ferro", "Ouro", "Cobre", "Prata"]
+    },
+    {
+        "group": "Acessórios de Moda",
+        "words": ["Colar", "Pulseira", "Anel", "Relógio"]
+    },
+    {
+        "group": "Signos do Zodíaco",
+        "words": ["Áries", "Leão", "Libra", "Capricórnio"]
+    },
+    {
+        "group": "Serviços de Entrega",
+        "words": ["Correios", "DHL", "FedEx", "UPS"]
+    },
+    {
+        "group": "Palavras Relacionadas à Educação",
+        "words": ["Professor", "Aluno", "Sala de Aula", "Livro"]
+    },
+    {
+        "group": "Marcas de Café",
+        "words": ["Starbucks", "Illy", "Lavazza", "Nespresso"]
+    },
+    {
+        "group": "Instrumentos de Corda",
+        "words": ["Violão", "Violino", "Baixo", "Harpa"]
+    },
+    {
+        "group": "Países Africanos",
+        "words": ["Nigéria", "África do Sul", "Egito", "Quênia"]
+    },
+    {
+        "group": "Elementos do Sistema Digestivo",
+        "words": ["Estômago", "Intestino", "Fígado", "Pâncreas"]
+    },
+    {
+        "group": "Pedras Preciosas",
+        "words": ["Diamante", "Esmeralda", "Safira", "Rubi"]
+    },
+    {
+        "group": "Partes de um Carro",
+        "words": ["Motor", "Rodas", "Freios", "Volante"]
+    },
+    {
+        "group": "Cores Secundárias",
+        "words": ["Roxo", "Laranja", "Verde-azulado", "Marrom"]
+    },
+    {
+        "group": "Cientistas Famosos",
+        "words": ["Einstein", "Curie", "Newton", "Darwin"]
+    },
+    {
+        "group": "Elementos da Natureza",
+        "words": ["Montanha", "Floresta", "Rio", "Deserto"]
+    },
+    {
+        "group": "Peças de Teatro Clássicas",
+        "words": ["Romeu e Julieta", "Hamlet", "Macbeth", "Otelo"]
+    },
+    {
+        "group": "Marcas de Tênis",
+        "words": ["Nike", "Adidas", "Puma", "Reebok"]
+    },
+    {
+        "group": "Coisas que Voam",
+        "words": ["Avião", "Pipa", "Helicóptero", "Balão"]
+    },
+    {
+        "group": "Redes Sociais",
+        "words": ["Facebook", "Instagram", "Twitter", "LinkedIn"]
+    },
+    {
+        "group": "Termos de Fotografia",
+        "words": ["Obturador", "Foco", "Exposição", "ISO"]
+    },
+    {
+        "group": "Elementos de um Jogo de Cartas",
+        "words": ["Baralho", "As", "Valete", "Dama"]
+    },
+    {
+        "group": "Palavras de Ação",
+        "words": ["Correr", "Saltar", "Nadar", "Dançar"]
+    },
+    {
+        "group": "Comidas Típicas Italianas",
+        "words": ["Pizza", "Pasta", "Risoto", "Tiramisù"]
+    },
+    {
+        "group": "Componentes Eletrônicos",
+        "words": ["Resistor", "Capacitor", "Transistor", "Diodo"]
+    },
+    {
+        "group": "Símbolos Matemáticos",
+        "words": ["Soma", "Subtração", "Multiplicação", "Divisão"]
+    },
+    {
+        "group": "Estágios do Ciclo de Vida",
+        "words": ["Nascimento", "Crescimento", "Maturidade", "Envelhecimento"]
+    },
+    {
+        "group": "Marcas de Cerveja",
+        "words": ["Budweiser", "Heineken", "Guinness", "Corona"]
+    },
+    {
+        "group": "Compositores Clássicos",
+        "words": ["Beethoven", "Mozart", "Bach", "Vivaldi"]
+    },
+    {
+        "group": "Partes de um Avião",
+        "words": ["Asa", "Fuselagem", "Motor", "Trem de Pouso"]
+    },
+    {
+        "group": "Acessórios de Tecnologia",
+        "words": ["Fone de Ouvido", "Mouse", "Teclado", "Carregador"]
+    },
+    {
+        "group": "Coisas Que Brilham",
+        "words": ["Estrela", "Diamante", "Fogo", "Luz"]
+    },
+    {
+        "group": "Conceitos Filosóficos",
+        "words": ["Ética", "Lógica", "Metafísica", "Epistemologia"]
+    },
+    {
+        "group": "Marcas de Roupas Esportivas",
+        "words": ["Nike", "Adidas", "Puma", "Under Armour"]
+    },
+    {
+        "group": "Países Asiáticos",
+        "words": ["China", "Japão", "Índia", "Coreia do Sul"]
+    },
+    {
+        "group": "Elementos de um Jogo de Tabuleiro",
+        "words": ["Dado", "Peão", "Tabuleiro", "Cartas"]
+    },
+    {
+        "group": "Palavras Relacionadas a Viagem",
+        "words": ["Passagem", "Bagagem", "Destino", "Turismo"]
+    },
+    {
+        "group": "Estilos de Artes Marciais",
+        "words": ["Karatê", "Jiu-Jitsu", "Taekwondo", "Kung Fu"]
+    },
+    {
+        "group": "Programas de TV",
+        "words": ["Game of Thrones", "Friends", "Breaking Bad", "Stranger Things"]
+    },
+    {
+        "group": "Conceitos de Psicologia",
+        "words": ["Cognição", "Emoção", "Comportamento", "Personalidade"]
+    },
+    {
+        "group": "Coisas Que Flutuam",
+        "words": ["Balsa", "Balão", "Boia", "Barco"]
+    },
+    {
+        "group": "Elementos de um Jornal",
+        "words": ["Manchete", "Editorial", "Reportagem", "Entrevista"]
+    },
+    {
+        "group": "Estilos de Calçados",
+        "words": ["Tênis", "Salto Alto", "Sandália", "Bota"]
+    },
+    {
+        "group": "Ferramentas de Jardinagem",
+        "words": ["Pá", "Tesoura de Podar", "Regador", "Enxada"]
+    },
+    {
+        "group": "Marcas de Chocolate",
+        "words": ["Lindt", "Ghirardelli", "Toblerone", "Hershey's"]
+    },
+    {
+        "group": "Materiais de Escritório",
+        "words": ["Caneta", "Papel", "Lápis", "Borracha"]
+    },
+    {
+        "group": "Elementos da Arte Contemporânea",
+        "words": ["Instalação", "Performance", "Arte Digital", "Ready-made"]
+    },
+    {
+        "group": "Acessórios de Cozinha",
+        "words": ["Espátula", "Ralador", "Abridor de Garrafas", "Descascador"]
+    },
+    {
+        "group": "Partes de um Livro",
+        "words": ["Capa", "Páginas", "Índice", "Prefácio"]
+    },
+    {
+        "group": "Marcas de Relógios",
+        "words": ["Rolex", "Casio", "Tag Heuer", "Seiko"]
+    },
+    {
+        "group": "Países da Oceania",
+        "words": ["Austrália", "Nova Zelândia", "Fiji", "Papua-Nova Guiné"]
+    },
+    {
+        "group": "Conceitos de Ecologia",
+        "words": ["Ecossistema", "Biodiversidade", "Sustentabilidade", "Reciclagem"]
+    },
+    {
+        "group": "Gêneros de Filme",
+        "words": ["Aventura", "Comédia", "Terror", "Documentário"]
+    },
+    {
+        "group": "Elementos do Corpo Humano",
+        "words": ["Pulmão", "Estômago", "Cérebro", "Coração"]
+    },
+    {
+        "group": "Marcas de Móveis",
+        "words": ["Ikea", "Tok&Stok", "Etna", "Casas Bahia"]
+    },
+    {
+        "group": "Termos Musicais",
+        "words": ["Melodia", "Ritmo", "Harmonia", "Nota"]
+    },
+    {
+        "group": "Conceitos Matemáticos",
+        "words": ["Álgebra", "Geometria", "Trigonometria", "Cálculo"]
+    },
+    {
+        "group": "Elementos da Cultura Pop",
+        "words": ["Super-heróis", "Filmes de Ação", "Videogames", "Quadrinhos"]
+    },
+    {
+        "group": "Marcas de Smartphone",
+        "words": ["Samsung", "Apple", "Huawei", "Xiaomi"]
+    },
+    {
+        "group": "Palavras de Arquitetura",
+        "words": ["Fachada", "Pilar", "Janela", "Telhado"]
+    },
+    {
+        "group": "Elementos de um Jogo de Xadrez",
+        "words": ["Rei", "Rainha", "Peão", "Bispo"]
+    },
+    {
+        "group": "Sobremesas Tradicionais",
+        "words": ["Pavê", "Petit Gateau", "Tiramisù", "Profiteroles"]
+    },
+    {
+        "group": "Tipos de Massas",
+        "words": ["Spaghetti", "Penne", "Fusilli", "Farfalle"]
+    },
+    {
+        "group": "Marcas de Câmeras Fotográficas",
+        "words": ["Canon", "Nikon", "Sony", "Panasonic"]
+    },
+    {
+        "group": "Elementos de um Espetáculo de Circo",
+        "words": ["Palhaço", "Malabarista", "Trapezista", "Mágico"]
+    },
+    {
+        "group": "Conceitos de Economia",
+        "words": ["Oferta", "Demanda", "Inflação", "PIB"]
+    },
+    {
+        "group": "Cores Neutras",
+        "words": ["Bege", "Cinza", "Marrom", "Preto"]
+    },
+    {
+        "group": "Acessórios de Praia",
+        "words": ["Sunga", "Chapéu", "Protetor Solar", "Canga"]
+    },
+    {
+        "group": "Instrumentos de Sopro",
+        "words": ["Trompete", "Saxofone", "Flauta", "Clarinete"]
+    },
+    {
+        "group": "Tipos de Penteado",
+        "words": ["Trança", "Rabo de Cavalo", "Coque", "Cabelo Solto"]
+    },
+    {
+        "group": "Marcas de Bicicleta",
+        "words": ["Trek", "Giant", "Specialized", "Cannondale"]
+    },
+    {
+        "group": "Elementos do Sistema Solar",
+        "words": ["Cometas", "Asteroides", "Meteoro", "Lua"]
+    },
+    {
+        "group": "Marcas de Tênis de Esportes",
+        "words": ["Nike", "Adidas", "Asics", "Puma"]
+    },
+    {
+        "group": "Palavras Relacionadas a Espionagem",
+        "words": ["Agente", "Disfarce", "Missão", "Código"]
+    },
+    {
+        "group": "Cortes de Carne",
+        "words": ["Filé Mignon", "Picanha", "Costela", "Lombo"]
+    },
+    {
+        "group": "Elementos de um Jogo de Vídeo Game",
+        "words": ["Controle", "Console", "Joystick", "Jogos"]
+    },
+    {
+        "group": "Ferramentas de Marcenaria",
+        "words": ["Serra Circular", "Plaina", "Trena", "Serrote"]
+    },
+    {
+        "group": "Conceitos de Física",
+        "words": ["Gravidade", "Energia", "Força", "Velocidade"]
+    },
+    {
+        "group": "Marcas de Refrigerante",
+        "words": ["Coca-Cola", "Pepsi", "Guaraná", "Sprite"]
+    },
+    {
+        "group": "Coisas Que Afundam",
+        "words": ["Âncora", "Pedra", "Chumbo", "Barco"]
+    },
+    {
+        "group": "Elementos de um Jardim Zoológico",
+        "words": ["Leão", "Elefante", "Macaco", "Girafa"]
+    },
+    {
+        "group": "Marcas de Máquinas Fotográficas",
+        "words": ["Canon", "Nikon", "Sony", "Panasonic"]
+    },
+    {
+        "group": "Conceitos de Sociologia",
+        "words": ["Estratificação Social", "Cultura", "Instituição", "Conflito"]
+    },
+    {
+        "group": "Tipos de Flores",
+        "words": ["Rosa", "Margarida", "Lírio", "Orquídea"]
+    },
+    {
+        "group": "Ferramentas de Pintura",
+        "words": ["Pincel", "Tinta", "Paleta", "Easel"]
+    },
+    {
+        "group": "Palavras de Astronomia",
+        "words": ["Estrela", "Galáxia", "Nebulosa", "Supernova"]
+    },
+    {
+        "group": "Elementos de um Jogo de Damas",
+        "words": ["Tabuleiro", "Peças Brancas", "Peças Pretas", "Movimento"]
+    },
+    {
+        "group": "Marcas de Tinta",
+        "words": ["Suvinil", "Coral", "Sherwin-Williams", "Eucatex"]
+    },
+    {
+        "group": "Conceitos de Marketing",
+        "words": ["Segmentação", "Posicionamento", "Mix de Marketing", "Branding"]
+    },
+    {
+        "group": "Tipos de Abraço",
+        "words": ["Apertado", "Afetuoso", "Amigável", "Tímido"]
+    },
+    {
+        "group": "Elementos do Sistema Linfático",
+        "words": ["Linfonodos", "Baço", "Amígdalas", "Tonsilas"]
+    },
+    {
+        "group": "Marcas de Mochila",
+        "words": ["JanSport", "Nike", "Adidas", "The North Face"]
+    },
+    {
+        "group": "Cores Pastel",
+        "words": ["Rosa-pastel", "Azul-celeste", "Amarelo-claro", "Verde-água"]
+    },
+    {
+        "group": "Palavras de Engenharia",
+        "words": ["Estrutura", "Resistência", "Concreto", "Projeto"]
+    },
+    {
+        "group": "Tipos de Barba",
+        "words": ["Cavanhaque", "Barba Cheia", "Barba por fazer", "Barba de Lenhador"]
+    },
+    {
+        "group": "Marcas de Chocolate Quente",
+        "words": ["Nescau", "Toddy", "Lindt", "Nestlé"]
+    },
+    {
+        "group": "Conceitos de Design",
+        "words": ["Equilíbrio", "Contraste", "Alinhamento", "Repetição"]
+    },
+    {
+        "group": "Elementos de um Escritório",
+        "words": ["Mesa", "Cadeira", "Computador", "Impressora"]
+    },
+    {
+        "group": "Partes de um Carro Elétrico",
+        "words": ["Bateria", "Motor Elétrico", "Carregador", "Inversor"]
+    },
+    {
+        "group": "Tipos de Bolsa",
+        "words": ["Clutch", "Tote", "Crossbody", "Mochila"]
+    },
+    {
+        "group": "Marcas de Fone de Ouvido",
+        "words": ["Apple", "Sony", "Bose", "JBL"]
+    },
+    {
+        "group": "Coisas que Brilham no Escuro",
+        "words": ["Estrelas", "Relógios", "Adesivos", "Tintas"]
+    },
+    {
+        "group": "Elementos da Era Medieval",
+        "words": ["Cavaleiro", "Castelo", "Dragão", "Princesa"]
+    },
+    {
+        "group": "Conceitos de Ciência da Computação",
+        "words": [
+            "Algoritmo",
+            "Linguagem de Programação",
+            "Banco de Dados",
+            "Inteligência Artificial"
+        ]
+    },
+    {
+        "group": "Tipos de Sanduíche",
+        "words": ["Hambúrguer", "Club Sandwich", "Baguete", "Wrap"]
+    },
+    {
+        "group": "Palavras de Astrologia",
+        "words": ["Horóscopo", "Signo", "Ascendente", "Mapa Astral"]
+    },
+    {
+        "group": "Ferramentas de Carpintaria",
+        "words": ["Serra Circular", "Serrote", "Martelo", "Trena"]
+    },
+    {
+        "group": "Estilos de Dança Urbana",
+        "words": ["Hip-hop", "Breakdance", "Locking", "Popping"]
+    },
+    {
+        "group": "Elementos de uma Cozinha Gourmet",
+        "words": ["Cooktop", "Forno Embutido", "Ilha", "Coifa"]
+    },
+    {
+        "group": "Conceitos de Medicina",
+        "words": ["Diagnóstico", "Tratamento", "Cirurgia", "Prevenção"]
+    },
+    {
+        "group": "Marcas de Smart TV",
+        "words": ["Samsung", "LG", "Sony", "Panasonic"]
+    },
+    {
+        "group": "Cores Vivas",
+        "words": ["Vermelho-vivo", "Amarelo-limão", "Rosa-choque", "Azul-turquesa"]
+    },
+    {
+        "group": "Tipos de Palavras",
+        "words": ["Substantivo", "Verbo", "Adjetivo", "Advérbio"]
+    },
+    {
+        "group": "Elementos de um Playground",
+        "words": ["Escorregador", "Balanço", "Gangorra", "Areia"]
+    },
+    {
+        "group": "Palavras de Botânica",
+        "words": ["Raiz", "Folha", "Caule", "Flor"]
+    },
+    {
+        "group": "Marcas de Perfume",
+        "words": ["Chanel", "Dior", "Gucci", "Calvin Klein"]
+    },
+    {
+        "group": "Elementos da Mitologia Grega",
+        "words": ["Zeus", "Afrodite", "Hades", "Medusa"]
+    },
+    {
+        "group": "Marcas de Tênis de Corrida",
+        "words": ["Nike", "Adidas", "Asics", "New Balance"]
+    },
+    {
+        "group": "Tipos de Sorvete",
+        "words": ["Baunilha", "Chocolate", "Morango", "Pistache"]
+    },
+    {
+        "group": "Ferramentas de Soldagem",
+        "words": ["Maçarico", "Eletrodo", "Máscara de Solda", "Alicate"]
+    },
+    {
+        "group": "Marcas de Carro de Luxo",
+        "words": ["Mercedes-Benz", "BMW", "Audi", "Jaguar"]
+    },
+    {
+        "group": "Conceitos de Fotografia",
+        "words": ["Exposição", "Foco", "Abertura", "Obturador"]
+    },
+    {
+        "group": "Tipos de Calçado",
+        "words": ["Tênis", "Sapato", "Sandália", "Bota"]
+    },
+    {
+        "group": "Acessórios de Viagem",
+        "words": ["Mala", "Passaporte", "Óculos de Sol", "Câmera"]
+    },
+    {
+        "group": "Conceitos de Química",
+        "words": ["Átomo", "Molécula", "Reação Química", "Elemento"]
+    },
+    {
+        "group": "Tipos de Tranporte Público",
+        "words": ["Ônibus", "Metrô", "Trem", "BRT"]
+    },
+    {
+        "group": "Elementos de um Parque de Diversões",
+        "words": ["Montanha-russa", "Carrinho de Bate-bate", "Roda-gigante", "Carrossel"]
+    },
+    {
+        "group": "Conceitos de Redes Sociais",
+        "words": ["Curtir", "Compartilhar", "Seguir", "Feed"]
+    },
+    {
+        "group": "Partes de um Computador",
+        "words": ["CPU", "Monitor", "Teclado", "Mouse"]
+    },
+    {
+        "group": "Tipos de Especiarias",
+        "words": ["Canela", "Pimenta", "Noz-moscada", "Gengibre"]
+    },
+    {
+        "group": "Elementos de um Estúdio de Gravação",
+        "words": ["Microfone", "Mesa de Som", "Fones de Ouvido", "Cabos"]
+    },
+    {
+        "group": "Conceitos de História",
+        "words": ["Idade Média", "Renascimento", "Revolução Industrial", "Guerra Fria"]
+    },
+    {
+        "group": "Marcas de Máquina de Café",
+        "words": ["Nespresso", "Keurig", "Breville", "De'Longhi"]
+    },
+    {
+        "group": "Cores Vibrantes",
+        "words": ["Vermelho-vivo", "Amarelo-limão", "Rosa-choque", "Azul-turquesa"]
+    },
+    {
+        "group": "Ferramentas de Encanamento",
+        "words": ["Chave de Grifo", "Cano", "Teflon", "Desentupidor"]
+    },
+    {
+        "group": "Tipos de Bebidas Alcoólicas",
+        "words": ["Vinho", "Cerveja", "Whisky", "Vodka"]
+    },
+    {
+        "group": "Marcas de Maquiagem",
+        "words": ["MAC", "Maybelline", "NARS", "Urban Decay"]
+    },
+    {
+        "group": "Partes de um Celular",
+        "words": ["Tela", "Bateria", "Câmera", "Botões"]
+    },
+    {
+        "group": "Tipos de Salada",
+        "words": ["Caesar", "Caprese", "Waldorf", "Grega"]
+    },
+    {
+        "group": "Conceitos de Educação",
+        "words": ["Ensino", "Aprendizado", "Pedagogia", "Currículo"]
+    },
+    {
+        "group": "Marcas de Roupas",
+        "words": ["Zara", "H&M", "Forever 21", "Gucci"]
+    },
+    {
+        "group": "Conceitos de Religião",
+        "words": ["Fé", "Oração", "Espiritualidade", "Ritual"]
+    },
+    {
+        "group": "Marcas de Automóveis",
+        "words": ["Toyota", "Ford", "Honda", "Volkswagen"]
+    },
+    {
+        "group": "Tipos de Sobremesa",
+        "words": ["Sorvete", "Torta", "Pudim", "Mousse"]
+    },
+    {
+        "group": "Elementos de um Computador",
+        "words": ["CPU", "Monitor", "Teclado", "Mouse"]
+    },
+    {
+        "group": "Marcas de Creme Dental",
+        "words": ["Colgate", "Sensodyne", "Crest", "Oral-B"]
+    },
+    {
+        "group": "Conceitos de Neurociência",
+        "words": ["Sinapse", "Neurônio", "Cérebro", "Neurotransmissor"]
+    },
+    {
+        "group": "Elementos da Moda",
+        "words": ["Estilo", "Tendência", "Modelagem", "Tecido"]
+    },
+    {
+        "group": "Cores de Cabelo",
+        "words": ["Loiro", "Castanho", "Ruivo", "Preto"]
+    },
+    {
+        "group": "Palavras de Matemática",
+        "words": ["Equação", "Teorema", "Integral", "Derivada"]
+    },
+    {
+        "group": "Marcas de Tênis Casual",
+        "words": ["Vans", "Converse", "Adidas Originals", "New Balance"]
+    },
+    {
+        "group": "Conceitos de Política",
+        "words": ["Democracia", "Ditadura", "Partido", "Eleição"]
+    },
+    {
+        "group": "Tipos de Instrumentos Musicais",
+        "words": ["Violino", "Piano", "Guitarra", "Trompete"]
+    },
+    {
+        "group": "Elementos de um Jardim Botânico",
+        "words": ["Árvore", "Flor", "Arbusto", "Trilha"]
+    },
+    {
+        "group": "Cores de Maquiagem",
+        "words": ["Nude", "Vermelho", "Rosa", "Marrom"]
+    },
+    {
+        "group": "Palavras de Jogos de Tabuleiro",
+        "words": ["Dado", "Tabuleiro", "Peão", "Carta"]
+    },
+    {
+        "group": "Conceitos de Saúde",
+        "words": ["Bem-estar", "Prevenção", "Tratamento", "Nutrição"]
+    },
+    {
+        "group": "Marcas de Água Mineral",
+        "words": ["Perrier", "Evian", "San Pellegrino", "Nestlé"]
+    },
+    {
+        "group": "Elementos de um Café",
+        "words": ["Xícara", "Pires", "Café Expresso", "Açúcar"]
+    },
+    {
+        "group": "Conceitos de Filosofia",
+        "words": ["Ética", "Lógica", "Metafísica", "Epistemologia"]
+    },
+    {
+        "group": "Marcas de Máquina de Lavar",
+        "words": ["Brastemp", "Electrolux", "Samsung", "LG"]
+    },
+    {
+        "group": "Cores de Roupas",
+        "words": ["Bege", "Marinho", "Vinho", "Cinza"]
+    },
+    {
+        "group": "Palavras de Engenharia Civil",
+        "words": ["Estrutura", "Fundação", "Projeto", "Concreto"]
+    },
+    {
+        "group": "Tipos de Camiseta",
+        "words": ["Regata", "Manga Curta", "Manga Longa", "Polo"]
+    },
+    {
+        "group": "Elementos de um Bar",
+        "words": ["Copo", "Balde de Gelo", "Coqueteleira", "Aperitivo"]
+    },
+    {
+        "group": "Conceitos de História da Arte",
+        "words": ["Renascimento", "Barroco", "Romantismo", "Cubismo"]
+    },
+    {
+        "group": "Marcas de Tênis Esportivos",
+        "words": ["Nike", "Adidas", "Puma", "Reebok"]
+    },
+    {
+        "group": "Elementos da Nutrição",
+        "words": ["Proteína", "Carboidrato", "Gordura", "Fibra"]
+    },
+    {
+        "group": "Conceitos de Arquitetura",
+        "words": ["Fachada", "Plano", "Estrutura", "Projeto"]
+    },
+    {
+        "group": "Marcas de Tênis de Skate",
+        "words": ["Vans", "DC Shoes", "Nike SB", "Etnies"]
+    },
+    {
+        "group": "Cores de Esmalte",
+        "words": ["Vermelho", "Nude", "Rosa", "Azul"]
+    },
+    {
+        "group": "Ferramentas de Eletricista",
+        "words": ["Alicate", "Multímetro", "Chave de Fenda", "Fio"]
+    },
+    {
+        "group": "Palavras de Ciências Biológicas",
+        "words": ["Biologia", "Ecossistema", "Evolução", "Genética"]
+    },
+    {
+        "group": "Marcas de Câmeras de Ação",
+        "words": ["GoPro", "DJI", "Insta360", "Sony Action Cam"]
+    },
+    {
+        "group": "Conceitos de Psiquiatria",
+        "words": ["Transtorno", "Terapia", "Medicação", "Diagnóstico"]
+    },
+    {
+        "group": "Elementos de um Estúdio de Fotografia",
+        "words": ["Câmera", "Tripé", "Iluminação", "Fundo"]
+    },
+    {
+        "group": "Cores de Tinta para Parede",
+        "words": ["Bege", "Cinza", "Azul-marinho", "Verde-oliva"]
+    },
+    {
+        "group": "Ferramentas de Encanador",
+        "words": ["Chave Inglesa", "Tubo de PVC", "Torneira", "Encanamento"]
+    },
+    {
+        "group": "Palavras de Matemática Financeira",
+        "words": ["Juros", "Desconto", "Valor Presente", "Investimento"]
+    },
+    {
+        "group": "Marcas de Mochila Escolar",
+        "words": ["JanSport", "Targus", "Kipling", "Nike"]
+    },
+    {
+        "group": "Conceitos de Psicanálise",
+        "words": ["Inconsciente", "Complexo de Édipo", "Transferência", "Repressão"]
+    },
+    {
+        "group": "Elementos de uma Academia",
+        "words": ["Esteira", "Halteres", "Banco", "Bicicleta Ergométrica"]
+    },
+    {
+        "group": "Conceitos de Artes Plásticas",
+        "words": ["Abstrato", "Figurativo", "Surrealismo", "Pintura"]
+    },
+    {
+        "group": "Cores de Olhos",
+        "words": ["Castanho", "Azul", "Verde", "Mel"]
+    },
+    {
+        "group": "Tipos de Chá",
+        "words": ["Camomila", "Verde", "Preto", "Erva-Cidreira"]
+    },
+    {
+        "group": "Marcas de Headphone",
+        "words": ["Bose", "Sony", "Sennheiser", "Beats"]
+    },
+    {
+        "group": "Conceitos de Antropologia",
+        "words": ["Cultura", "Etnografia", "Sociedade", "Etnocentrismo"]
+    },
+    {
+        "group": "Cores de Batom",
+        "words": ["Vermelho", "Nude", "Rosa", "Marrom"]
+    },
+    {
+        "group": "Cores de Carro",
+        "words": ["Prata", "Azul Celeste", "Vermelho Metálico", "Verde Musgo"]
+    },
+    {
+        "group": "Marcas de Máquina Fotográfica",
+        "words": ["Nikon", "Canon", "Sony", "Fujifilm"]
+    },
+    {
+        "group": "Palavras de Música Clássica",
+        "words": ["Sinfonia", "Ópera", "Sonata", "Concerto"]
+    },
+    {
+        "group": "Conceitos de Psicologia Social",
+        "words": ["Conformidade", "Normas Sociais", "Comportamento de Grupo", "Cognição Social"]
+    },
+    {
+        "group": "Elementos de uma Cozinha Profissional",
+        "words": ["Salamandra", "Sous-vide", "Mandoline", "Bain-marie"]
+    },
+    {
+        "group": "Cores de Lentes de Contato",
+        "words": ["Cinza Topázio", "Azul Safira", "Verde Esmeralda", "Mel Dourado"]
+    },
+    {
+        "group": "Palavras de Física",
+        "words": ["Gravidade", "Magnetismo", "Óptica", "Termodinâmica"]
+    },
+    {
+        "group": "Marcas de Fones de Ouvido sem Fio",
+        "words": ["Apple AirPods", "Samsung Galaxy Buds", "Sony WF", "Jabra Elite"]
+    },
+    {
+        "group": "Conceitos de Geopolítica",
+        "words": ["Blocos Econômicos", "Teoria do Heartland", "Soft Power", "Globalização"]
+    },
+    {
+        "group": "Marcas de Mala de Viagem",
+        "words": ["Samsonite", "Rimowa", "Travelpro", "American Tourister"]
+    },
+    {
+        "group": "Cores de Papel de Parede",
+        "words": ["Coral", "Marinho", "Ocre", "Cinza Pérola"]
+    },
+    {
+        "group": "Palavras de Medicina",
+        "words": ["Anestesiologia", "Radiologia", "Neurocirurgia", "Gastroenterologia"]
+    },
+    {
+        "group": "Marcas de Relógio",
+        "words": ["Rolex", "Omega", "Seiko", "Citizen"]
+    },
+    {
+        "group": "Conceitos de Engenharia Civil",
+        "words": ["Estruturas Metálicas", "Geotecnia", "Saneamento Básico", "Topografia"]
+    },
+    {
+        "group": "Cores de Roupas de Verão",
+        "words": ["Coral", "Azul Céu", "Amarelo Solar", "Branco"]
+    },
+    {
+        "group": "Marcas de Skate",
+        "words": ["Vans", "Element", "Santa Cruz", "Thrasher"]
+    },
+    {
+        "group": "Conceitos de Linguística",
+        "words": ["Fonologia", "Morfologia", "Sintaxe", "Semântica"]
+    },
+    {
+        "group": "Tipos de Bolsa Feminina",
+        "words": ["Tote Bag", "Clutch", "Hobo", "Mochila"]
+    },
+    {
+        "group": "Elementos de uma Biblioteca",
+        "words": ["Catálogo", "Estantes", "Bibliotecário", "Sala de Leitura"]
+    },
+    {
+        "group": "Conceitos de Astronomia",
+        "words": ["Exoplaneta", "Supernova", "Buraco Negro", "Constelação"]
+    },
+    {
+        "group": "Instrumentos Musicais de Corda",
+        "words": ["Violino", "Guitarra", "Violão", "Baixo"]
+    },
+    {
+        "group": "Nomes de Flores",
+        "words": ["Rosa", "Margarida", "Girassol", "Orquídea"]
+    },
+    {
+        "group": "Cores do Arco-Íris",
+        "words": ["Vermelho", "Laranja", "Amarelo", "Verde"]
+    },
+    {
+        "group": "Nomes de Países Europeus",
+        "words": ["França", "Alemanha", "Espanha", "Itália"]
+    },
+    {
+        "group": "Tipos de Doces",
+        "words": ["Chocolate", "Pirulito", "Goma de Mascar", "Bombom"]
+    },
+    {
+        "group": "Desenhos Animados Clássicos",
+        "words": ["Tom e Jerry", "Pernalonga", "Mickey Mouse", "Scooby-Doo"]
+    },
+    {
+        "group": "Nomes de Peixes",
+        "words": ["Salmão", "Atum", "Bacalhau", "Tilápia"]
+    },
+    {
+        "group": "Tipos de Sobremesas",
+        "words": ["Sorvete", "Bolo", "Pudim", "Gelatina"]
+    },
+    {
+        "group": "Nomes de Cores Neutras",
+        "words": ["Bege", "Marrom", "Cinza", "Branco"]
+    },
+    {
+        "group": "Nomes de Aves",
+        "words": ["Pato", "Galinha", "Coruja", "Pomba"]
+    },
+    {
+        "group": "Nomes de Planetas",
+        "words": ["Marte", "Júpiter", "Saturno", "Urano"]
+    },
+    {
+        "group": "Nomes de Insetos",
+        "words": ["Borboleta", "Abelha", "Formiga", "Libélula"]
+    },
+    {
+        "group": "Marcas de Shampoo",
+        "words": ["Pantene", "Head & Shoulders", "Dove", "Herbal Essences"]
+    },
+    {
+        "group": "Nomes de Super-Heróis",
+        "words": ["Homem-Aranha", "Batman", "Superman", "Mulher Maravilha"]
+    },
+    {
+        "group": "Tipos de Árvores",
+        "words": ["Carvalho", "Pinheiro", "Mangueira", "Cerejeira"]
+    },
+    {
+        "group": "Nomes de Estações de Metrô",
+        "words": ["Times Square", "Shibuya", "London Bridge", "Champs-Élysées"]
+    },
+    {
+        "group": "Marcas de Cereal Matinal",
+        "words": ["Kellogg's", "Nestlé", "Quaker", "General Mills"]
+    },
+    {
+        "group": "Nomes de Constelações",
+        "words": ["Órion", "Ursa Maior", "Cruzeiro do Sul", "Cisne"]
+    },
+    {
+        "group": "Tipos de Brinquedos",
+        "words": ["Boneca", "Carrinho", "Quebra-Cabeça", "Bola"]
+    },
+    {
+        "group": "Nomes de Pássaros",
+        "words": ["Canário", "Rouxinol", "Papagaio", "Pardal"]
+    },
+    {
+        "group": "Marcas de Computadores",
+        "words": ["Apple", "Dell", "HP", "Lenovo"]
+    },
+    {
+        "group": "Nomes de Bateristas Famosos",
+        "words": ["Ringo Starr", "Dave Grohl", "Travis Barker", "Sheila E."]
+    },
+    {
+        "group": "Tipos de Esportes Aquáticos",
+        "words": ["Natação", "Surfe", "Polo Aquático", "Mergulho"]
+    },
+    {
+        "group": "Nomes de Princesas Disney",
+        "words": ["Cinderela", "Ariel", "Bela", "Elsa"]
+    },
+    {
+        "group": "Nomes de Vilões de Filmes",
+        "words": ["Coringa", "Ursula", "Scar", "Cruella de Vil"]
+    },
+    {
+        "group": "Tipos de Sobremesas Geladas",
+        "words": ["Sorvete", "Milkshake", "Sundae", "Gelato"]
+    },
+    {
+        "group": "Marcas de Telefones Celulares",
+        "words": ["Samsung", "iPhone", "Google Pixel", "OnePlus"]
+    },
+    {
+        "group": "Nomes de Pedras Preciosas",
+        "words": ["Diamante", "Esmeralda", "Safira", "Rubi"]
+    },
+    {
+        "group": "Nomes de Atores de Comédia",
+        "words": ["Jim Carrey", "Melissa McCarthy", "Adam Sandler", "Tina Fey"]
+    },
+    {
+        "group": "Tipos de Bolsas",
+        "words": ["Tote", "Clutch", "Mochila", "Bolsa de ombro"]
+    },
+    {
+        "group": "Nomes de Softwares de Edição de Imagem",
+        "words": ["Photoshop", "Lightroom", "GIMP", "Canva"]
+    },
+    {
+        "group": "Marcas de Máquinas de Lavar Roupa",
+        "words": ["Whirlpool", "LG", "Samsung", "Electrolux"]
+    },
+    {
+        "group": "Tipos de Sopas",
+        "words": ["Minestrone", "Canja", "Creme de Tomate", "Sopa de Abóbora"]
+    },
+    {
+        "group": "Nomes de Oceanos",
+        "words": ["Atlântico", "Pacífico", "Índico", "Antártico"]
+    },
+    {
+        "group": "Tipos de Arquitetura",
+        "words": ["Gótico", "Moderno", "Barroco", "Minimalista"]
+    },
+    {
+        "group": "Marcas de Máquinas de Café",
+        "words": ["Keurig", "Nespresso", "Breville", "Hamilton Beach"]
+    },
+    {
+        "group": "Nomes de Ferramentas Manuais",
+        "words": ["Martelo", "Chave de fenda", "Serrote", "Alicate"]
+    },
+    {
+        "group": "Tipos de Fontes de Energia",
+        "words": ["Solar", "Eólica", "Hidrelétrica", "Nuclear"]
+    },
+    {
+        "group": "Nomes de Pratos Típicos Italianos",
+        "words": ["Pizza", "Pasta", "Risoto", "Tiramisù"]
+    },
+    {
+        "group": "Tipos de Pintura",
+        "words": ["Aquarela", "Óleo", "Acrílico", "Guache"]
+    },
+    {
+        "group": "Nomes de Áreas de Estudo",
+        "words": ["Biologia", "Psicologia", "História", "Filosofia"]
+    },
+    {
+        "group": "Marcas de Fones de Ouvido",
+        "words": ["Sony", "Bose", "JBL", "Apple AirPods"]
+    },
+    {
+        "group": "Nomes de Bons Livros Infantis",
+        "words": ["O Pequeno Príncipe", "Alice no País das Maravilhas", "Matilda", "Harry Potter"]
+    },
+    {
+        "group": "Nomes de Cores",
+        "words": ["Azul", "Verde", "Vermelho", "Amarelo"]
+    },
+    {
+        "group": "Nomes de Países Asiáticos",
+        "words": ["China", "Japão", "Índia", "Coreia"]
+    },
+    {
+        "group": "Tipos de Letras do Alfabeto",
+        "words": ["A", "B", "C", "D"]
+    },
+    {
+        "group": "Nomes de Animais Marinhos",
+        "words": ["Golfinho", "Baleia", "Tartaruga", "Polvo"]
+    },
+    {
+        "group": "Tipos de Chapéus",
+        "words": ["Fedora", "Boné", "Cartola", "Chapéu de palha"]
+    },
+    {
+        "group": "Nomes de Estações do Ano",
+        "words": ["Primavera", "Verão", "Outono", "Inverno"]
+    },
+    {
+        "group": "Nomes de Superpoderes",
+        "words": ["Voo", "Invisibilidade", "Superforça", "Telepatia"]
+    },
+    {
+        "group": "Marcas de Câmeras de Celular",
+        "words": ["iPhone", "Samsung Galaxy", "Google Pixel", "Huawei"]
+    },
+    {
+        "group": "Tipos de Peixes de Aquário",
+        "words": ["Betta", "Guppy", "Tetra", "Goldfish"]
+    },
+    {
+        "group": "Nomes de Instrumentos de Sopro",
+        "words": ["Flauta", "Trompete", "Saxofone", "Clarinete"]
+    },
+    {
+        "group": "Marcas de Tênis de Mesa",
+        "words": ["Butterfly", "Stiga", "Donic", "Yasaka"]
+    },
+    {
+        "group": "Tipos de Pães",
+        "words": ["Baguete", "Pão integral", "Ciabatta", "Pão de forma"]
+    },
+    {
+        "group": "Nomes de Coquetéis",
+        "words": ["Mojito", "Margarita", "Martini", "Caipirinha"]
+    },
+    {
+        "group": "Marcas de Bicicletas",
+        "words": ["Trek", "Specialized", "Giant", "Cannondale"]
+    },
+    {
+        "group": "Tipos de Bolsas Femininas",
+        "words": ["Clutch", "Tote", "Bolsa transversal", "Bolsa de ombro"]
+    },
+    {
+        "group": "Nomes de Continentes",
+        "words": ["América", "Europa", "Ásia", "África"]
+    },
+    {
+        "group": "Marcas de Máquinas de Costura",
+        "words": ["Singer", "Brother", "Janome", "Pfaff"]
+    },
+    {
+        "group": "Tipos de Sobremesas com Frutas",
+        "words": ["Salada de frutas", "Sorvete de frutas", "Compota", "Smoothie"]
+    },
+    {
+        "group": "Nomes de Coisas no Céu",
+        "words": ["Sol", "Lua", "Estrela", "Nuvem"]
+    },
+    {
+        "group": "Marcas de Laptops",
+        "words": ["Dell", "HP", "Acer", "Asus"]
+    },
+    {
+        "group": "Tipos de Massas de Modelar",
+        "words": ["Play-Doh", "Massa de biscuit", "Massa de modelar caseira", "Plastilina"]
+    },
+    {
+        "group": "Nomes de Ferramentas de Jardim",
+        "words": ["Tesoura de poda", "Ancinho", "Pá", "Regador"]
+    },
+    {
+        "group": "Tipos de Jogos de Tabuleiro",
+        "words": ["Monopoly", "Xadrez", "Jogo da Vida", "Banco Imobiliário"]
+    },
+    {
+        "group": "Nomes de Estrelas Famosas",
+        "words": ["Brad Pitt", "Angelina Jolie", "Leonardo DiCaprio", "Meryl Streep"]
+    }
+]
