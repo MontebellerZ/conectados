@@ -1,0 +1,62 @@
+#play #modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play #modal.hide {
+    display: none;
+}
+
+#play #modal #help {
+    max-width: min(90%, 30em);
+    position: relative;
+    background-color: var(--color2);
+    padding: 1.4em 1.7em;
+    border: 0.2em solid #fff;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1em;
+}
+
+#play #modal #help div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6em;
+    font-size: 1.3em;
+}
+
+#play #modal #help p{
+    margin: 0px;
+    font-weight: 400;
+}
+
+#play #modal #help button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #0000;
+    border: 0.2em solid #fff;
+    outline: 0px;
+    border-radius: 1000px;
+    background-color: var(--color2);
+    padding: 0.2em;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
+}
