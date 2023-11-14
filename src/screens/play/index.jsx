@@ -35,7 +35,7 @@ function Play() {
 	const [found, setFound] = useState([]);
 	const [selected, setSelected] = useState([]);
 
-	const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
+	const randomOrder = useMemo(() => getRandomOrder(lvl, id), [lvl, id]);
 
 	const checkSelected = (selected) => {
 		const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
@@ -82,8 +82,12 @@ function Play() {
 
 				<div id="board">
 					{found.map((box, i) => {
+						const classList = ["box", "box" + (box.groupIndex + 1)];
+
+						const classname = classList.join(" ");
+
 						return (
-							<div key={i} className={`box box${i+1}`}>
+							<div key={i} className={classname}>
 								<p>{box.group}</p>
 								<p>{box.words.join(", ")}</p>
 							</div>

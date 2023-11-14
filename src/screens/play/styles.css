@@ -5,6 +5,8 @@
 	justify-content: center;
 	height: 90%;
 	gap: 1.6em;
+	max-width: 500px;
+	width: 100%;
 }
 
 #play #header {
@@ -40,6 +42,7 @@
 	align-items: stretch;
 	justify-content: flex-start;
 	gap: 0.7em;
+	width: 100%;
 }
 
 #play #game .settings {
@@ -59,6 +62,7 @@
 }
 
 #play #game #board {
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 0.4em;
@@ -73,11 +77,10 @@
 	border: 0px;
 	outline: 0px;
 	cursor: pointer;
-	aspect-ratio: 16/10;
-	min-height: 5em;
 	text-transform: uppercase;
-	padding: 0.3em;
-	font-size: 0.9em;
+	height: 6em;
+	padding: 0.5em;
+	font-size: 1em;
 }
 
 #play #game #board .card.selected {
@@ -88,8 +91,9 @@
 	display: none;
 }
 
-#play #game #board .card {
+#play #game #board .box {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background-color: var(--color2);
@@ -97,11 +101,24 @@
 	border: 0px;
 	outline: 0px;
 	cursor: pointer;
-	aspect-ratio: 16/10;
 	min-height: 5em;
 	text-transform: uppercase;
 	padding: 0.3em;
 	font-size: 0.9em;
+	grid-column: 1/5;
+}
+
+#play #game #board .box.box1 {
+	background-color: var(--group1-color);
+}
+#play #game #board .box.box2 {
+	background-color: var(--group2-color);
+}
+#play #game #board .box.box3 {
+	background-color: var(--group3-color);
+}
+#play #game #board .box.box4 {
+	background-color: var(--group4-color);
 }
 
 #play #modal {
