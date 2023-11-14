@@ -1,3 +1,92 @@
+#play {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 90%;
+    gap: 1.6em;
+}
+
+#play #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#play #header h1 {
+    flex: 1;
+    margin: 0px;
+    font-size: 1.8em;
+}
+
+#play #header button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    background-color: #0000;
+}
+
+#play #game {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.7em;
+}
+
+#play #game .settings {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+#play #game .settings .gameID {
+    font-size: 1.1em;
+}
+
+#play #game .settings .triesCounter span:first-of-type {
+    font-weight: 400;
+}
+
+#play #game #board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.4em;
+}
+
+#play #game #board .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    border-radius: 0.4em;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+    aspect-ratio: 16/10;
+    min-height: 5em;
+    text-transform: uppercase;
+    padding: 0.3em;
+    font-size: 0.9em;
+}
+
+#play #game #board .card.selected {
+    background-color: var(--color4);
+}
+
+#play #game #board .card.found {
+    display: none;
+}
+
 #play #modal {
     position: absolute;
     top: 0;
@@ -37,7 +126,7 @@
     font-size: 1.3em;
 }
 
-#play #modal #help p{
+#play #modal #help p {
     margin: 0px;
     font-weight: 400;
 }

@@ -4,13 +4,54 @@ import { useParams } from "react-router";
 import { getLvl } from "../../data";
 import { Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle, X } from "react-feather";
+import seedrandom from "seedrandom";
+
+const groupColors = ["#c2410c", "#047857", "#0e7490", "#6d28d9"];
+
+const getRandomOrder = (lvl, seed) => {
+    const pseudoRandom = seedrandom(seed);
+
+    const allWords = lvl.flatMap(({ words, group }, i) =>
+        words.map((w) => ({ word: w, group, groupIndex: i }))
+    );
+
+    for (let i = 0; i < allWords.length; i++) {
+        const changePos = Math.floor(pseudoRandom() * allWords.length);
+
+        const aux = allWords[i];
+        allWords[i] = allWords[changePos];
+        allWords[changePos] = aux;
+    }
+
+    return allWords;
+};
 
 function Play() {
     const { id } = useParams();
 
-    const [showHelp, setShowHelp] = useState(false);
-
     const lvl = useMemo(() => getLvl(id), [id]);
+
+    const [showHelp, setShowHelp] = useState(false);
+    const [tries, setTries] = useState(0);
+
+    const [found, setFound] = useState([]);
+    const [selected, setSelected] = useState([]);
+
+    const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
+
+    const checkSelected = (selected) => {
+        const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
+
+        setSelected([]);
+
+        if (allSameGroup) setFound([...found, selected]);
+
+        setTries((t) => t + 1);
+    };
+
+    const dateToday = new Date().toLocaleDateString();
+
+    const isDaily = dateToday.replace(/\//g, "") === id;
 
     return (
         <div id="play">
@@ -19,9 +60,62 @@ function Play() {
                     <ArrowLeft />
                 </Link>
 
+                <h1>CONECTADOS</h1>
+
                 <button onClick={() => setShowHelp((h) => !h)}>
                     <HelpCircle />
                 </button>
+            </div>
+
+            <div id="game">
+                <div className="settings">
+                    <span className="gameID">{isDaily ? dateToday : `#${id}`}</span>
+                    <span className="triesCounter">
+                        <span>TENTATIVAS:</span> <span>{tries}</span>
+                    </span>
+                </div>
+
+                <div id="board">
+                    {randomOrder.map((box, i) => {
+                        const handleSelect = () => {
+                            const newSelected = [...selected];
+
+                            const includedIndex = newSelected.findIndex(
+                                (sel) => sel.word === box.word
+                            );
+
+                            if (includedIndex >= 0) {
+                                newSelected.splice(includedIndex, 1);
+                                setSelected(newSelected);
+                            } else {
+                                newSelected.push(box);
+                            }
+
+                            setSelected(newSelected);
+
+                            if (newSelected.length === 4) checkSelected(newSelected);
+                        };
+
+                        const isSelected = selected.find((sel) => sel.word === box.word);
+                        const isFound = found
+                            .flatMap((s) => s)
+                            .find((fnd) => fnd.word === box.word);
+
+                        const classList = [
+                            "card",
+                            isSelected ? "selected" : "",
+                            isFound ? "found" : "",
+                        ];
+
+                        const classname = classList.join(" ");
+
+                        return (
+                            <button key={i} onClick={handleSelect} className={classname}>
+                                {box.word}
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
 
             <div id="modal" className={showHelp ? "" : "hide"}>

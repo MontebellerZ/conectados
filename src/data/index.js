@@ -4,20 +4,36 @@ import seedrandom from "seedrandom";
 const GROUPS_PER_LEVEL = 4;
 const DEFAULT_MAX_LVL = 1000;
 
+function checkSimilar(group1, group2) {
+    if (group1.group === group2.group) return true;
+
+    for (let i = 0; i < group1.words.length; i++) {
+        for (let j = 0; j < group2.words.length; j++) {
+            if (group1.words[i] === group2.words[j]) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 export function getLvl(seed) {
     const pseudoRandom = seedrandom(seed);
 
-    const randPositions = [];
+    const randGroups = [];
 
-    while (randPositions.length < GROUPS_PER_LEVEL) {
+    while (randGroups.length < GROUPS_PER_LEVEL) {
         const randIndex = Math.floor(pseudoRandom() * groups.length);
 
-        if (randPositions.includes(randIndex)) continue;
+        const includedIndex = randGroups.findIndex((g) => checkSimilar(g, groups[randIndex]));
 
-        randPositions.push(randIndex);
+        if (includedIndex >= 0) continue;
+
+        randGroups.push(groups[randIndex]);
     }
 
-    return randPositions.map((pos) => groups[pos]);
+    return randGroups;
 }
 
 export function getAllLvls() {
