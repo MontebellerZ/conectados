@@ -1,151 +1,168 @@
 #play {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    height: 90%;
-    gap: 1.6em;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	height: 90%;
+	gap: 1.6em;
 }
 
 #play #header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+	text-align: center;
 }
 
 #play #header h1 {
-    flex: 1;
-    margin: 0px;
-    font-size: 1.8em;
+	flex: 1;
+	margin: 0px;
+	font-size: 1.8em;
 }
 
 #play #header button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    outline: 0px;
-    background-color: #0000;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0px;
+	background-color: #0000;
 }
 
 #play #game {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 0.7em;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	gap: 0.7em;
 }
 
 #play #game .settings {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
-    font-size: 0.9em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1em;
+	font-size: 0.9em;
 }
 
 #play #game .settings .gameID {
-    font-size: 1.1em;
+	font-size: 1.1em;
 }
 
 #play #game .settings .triesCounter span:first-of-type {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 #play #game #board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.4em;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.4em;
 }
 
 #play #game #board .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color2);
-    border-radius: 0.4em;
-    border: 0px;
-    outline: 0px;
-    cursor: pointer;
-    aspect-ratio: 16/10;
-    min-height: 5em;
-    text-transform: uppercase;
-    padding: 0.3em;
-    font-size: 0.9em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color2);
+	border-radius: 0.4em;
+	border: 0px;
+	outline: 0px;
+	cursor: pointer;
+	aspect-ratio: 16/10;
+	min-height: 5em;
+	text-transform: uppercase;
+	padding: 0.3em;
+	font-size: 0.9em;
 }
 
 #play #game #board .card.selected {
-    background-color: var(--color4);
+	background-color: var(--color4);
 }
 
 #play #game #board .card.found {
-    display: none;
+	display: none;
+}
+
+#play #game #board .card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color2);
+	border-radius: 0.4em;
+	border: 0px;
+	outline: 0px;
+	cursor: pointer;
+	aspect-ratio: 16/10;
+	min-height: 5em;
+	text-transform: uppercase;
+	padding: 0.3em;
+	font-size: 0.9em;
 }
 
 #play #modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #play #modal.hide {
-    display: none;
+	display: none;
 }
 
 #play #modal #help {
-    max-width: min(90%, 30em);
-    position: relative;
-    background-color: var(--color2);
-    padding: 1.4em 1.7em;
-    border: 0.2em solid #fff;
-    border-radius: 0.8em;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 1em;
+	max-width: min(90%, 30em);
+	position: relative;
+	background-color: var(--color2);
+	padding: 1.4em 1.7em;
+	border: 0.2em solid #fff;
+	border-radius: 0.8em;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	gap: 1em;
 }
 
 #play #modal #help div {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.6em;
-    font-size: 1.3em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0.6em;
+	font-size: 1.3em;
 }
 
 #play #modal #help p {
-    margin: 0px;
-    font-weight: 400;
+	margin: 0px;
+	font-weight: 400;
 }
 
 #play #modal #help button {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    background-color: #0000;
-    border: 0.2em solid #fff;
-    outline: 0px;
-    border-radius: 1000px;
-    background-color: var(--color2);
-    padding: 0.2em;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: inherit;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	background-color: #0000;
+	border: 0.2em solid #fff;
+	outline: 0px;
+	border-radius: 1000px;
+	background-color: var(--color2);
+	padding: 0.2em;
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: inherit;
 }

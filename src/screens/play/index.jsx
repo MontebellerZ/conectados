@@ -7,141 +7,154 @@ import { ArrowLeft, HelpCircle, X } from "react-feather";
 import seedrandom from "seedrandom";
 
 const getRandomOrder = (lvl, seed) => {
-    const pseudoRandom = seedrandom(seed);
+	const pseudoRandom = seedrandom(seed);
 
-    const allWords = lvl.flatMap(({ words, group }, i) =>
-        words.map((w) => ({ word: w, group, groupIndex: i }))
-    );
+	const allWords = lvl.flatMap(({ words, group }, i) =>
+		words.map((w) => ({ word: w, group, groupIndex: i }))
+	);
 
-    for (let i = 0; i < allWords.length; i++) {
-        const changePos = Math.floor(pseudoRandom() * allWords.length);
+	for (let i = 0; i < allWords.length; i++) {
+		const changePos = Math.floor(pseudoRandom() * allWords.length);
 
-        const aux = allWords[i];
-        allWords[i] = allWords[changePos];
-        allWords[changePos] = aux;
-    }
+		const aux = allWords[i];
+		allWords[i] = allWords[changePos];
+		allWords[changePos] = aux;
+	}
 
-    return allWords;
+	return allWords;
 };
 
 function Play() {
-    const { id } = useParams();
+	const { id } = useParams();
 
-    const lvl = useMemo(() => getLvl(id), [id]);
+	const lvl = useMemo(() => getLvl(id), [id]);
 
-    const [showHelp, setShowHelp] = useState(false);
-    const [tries, setTries] = useState(0);
+	const [showHelp, setShowHelp] = useState(false);
+	const [tries, setTries] = useState(0);
 
-    const [found, setFound] = useState([]);
-    const [selected, setSelected] = useState([]);
+	const [found, setFound] = useState([]);
+	const [selected, setSelected] = useState([]);
 
-    const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
+	const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
 
-    const checkSelected = (selected) => {
-        const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
+	const checkSelected = (selected) => {
+		const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
 
-        setSelected([]);
+		setSelected([]);
 
-        if (allSameGroup) setFound([...found, selected]);
+		if (allSameGroup) {
+			const foundGroup = {
+				...lvl.find((group) => group.group === selected[0].group),
+				groupIndex: selected[0].groupIndex,
+			};
 
-        setTries((t) => t + 1);
-    };
+			setFound([...found, foundGroup]);
+		}
 
-    const dateToday = new Date().toLocaleDateString();
+		setTries((t) => t + 1);
+	};
 
-    const isDaily = dateToday.replace(/\//g, "") === id;
+	const dateToday = new Date().toLocaleDateString();
 
-    return (
-        <div id="play">
-            <div id="header">
-                <Link to={"/"}>
-                    <ArrowLeft />
-                </Link>
+	const isDaily = dateToday.replace(/\//g, "") === id;
 
-                <h1>CONECTADOS</h1>
+	return (
+		<div id="play">
+			<div id="header">
+				<Link to={"/"}>
+					<ArrowLeft />
+				</Link>
 
-                <button onClick={() => setShowHelp((h) => !h)}>
-                    <HelpCircle />
-                </button>
-            </div>
+				<h1>CONECTADOS</h1>
 
-            <div id="game">
-                <div className="settings">
-                    <span className="gameID">{isDaily ? dateToday : `#${id}`}</span>
-                    <span className="triesCounter">
-                        <span>TENTATIVAS:</span> <span>{tries}</span>
-                    </span>
-                </div>
+				<button onClick={() => setShowHelp((h) => !h)}>
+					<HelpCircle />
+				</button>
+			</div>
 
-                <div id="board">
-                    {randomOrder.map((box, i) => {
-                        const handleSelect = () => {
-                            const newSelected = [...selected];
+			<div id="game">
+				<div className="settings">
+					<span className="gameID">{isDaily ? dateToday : `#${id}`}</span>
+					<span className="triesCounter">
+						<span>TENTATIVAS:</span> <span>{tries}</span>
+					</span>
+				</div>
 
-                            const includedIndex = newSelected.findIndex(
-                                (sel) => sel.word === box.word
-                            );
+				<div id="board">
+					{found.map((box, i) => {
+						return (
+							<div key={i} className={`box box${i+1}`}>
+								<p>{box.group}</p>
+								<p>{box.words.join(", ")}</p>
+							</div>
+						);
+					})}
+					{randomOrder.map((card, i) => {
+						const handleSelect = () => {
+							const newSelected = [...selected];
 
-                            if (includedIndex >= 0) {
-                                newSelected.splice(includedIndex, 1);
-                                setSelected(newSelected);
-                            } else {
-                                newSelected.push(box);
-                            }
+							const includedIndex = newSelected.findIndex(
+								(sel) => sel.word === card.word
+							);
 
-                            setSelected(newSelected);
+							if (includedIndex >= 0) {
+								newSelected.splice(includedIndex, 1);
+								setSelected(newSelected);
+							} else {
+								newSelected.push(card);
+							}
 
-                            if (newSelected.length === 4) checkSelected(newSelected);
-                        };
+							setSelected(newSelected);
 
-                        const isSelected = selected.find((sel) => sel.word === box.word);
-                        const isFound = found
-                            .flatMap((s) => s)
-                            .find((fnd) => fnd.word === box.word);
+							if (newSelected.length === 4) checkSelected(newSelected);
+						};
 
-                        const classList = [
-                            "card",
-                            isSelected ? "selected" : "",
-                            isFound ? "found" : "",
-                        ];
+						const isSelected = selected.find((sel) => sel.word === card.word);
+						const isFound = found.find((fnd) => fnd.group === card.group);
 
-                        const classname = classList.join(" ");
+						const classList = [
+							"card",
+							isSelected ? "selected" : "",
+							isFound ? "found" : "",
+						];
 
-                        return (
-                            <button key={i} onClick={handleSelect} className={classname}>
-                                {box.word}
-                            </button>
-                        );
-                    })}
-                </div>
-            </div>
+						const classname = classList.join(" ");
 
-            <div id="modal" className={showHelp ? "" : "hide"}>
-                <div id="help">
-                    <div>
-                        <HelpCircle />
-                        <span>Como jogar</span>
-                    </div>
+						return (
+							<button key={i} onClick={handleSelect} className={classname}>
+								{card.word}
+							</button>
+						);
+					})}
+				</div>
+			</div>
 
-                    <p>Forme grupos de 4 palavras que tenham algo em comum.</p>
-                    <p>
-                        Clique em uma palavra para selecioná-la. Se precisar, você pode clicar
-                        novamente para desselecionar.
-                    </p>
-                    <p>
-                        Assim que você selecionar 4 palavras o jogo irá automaticamente conferir se
-                        o grupo está correto.
-                    </p>
-                    <p>Se estiver correto, a categoria será revelada. Senão, tente novamente.</p>
-                    <p>Descubra os 4 grupos.</p>
+			<div id="modal" className={showHelp ? "" : "hide"}>
+				<div id="help">
+					<div>
+						<HelpCircle />
+						<span>Como jogar</span>
+					</div>
 
-                    <button onClick={() => setShowHelp(false)}>
-                        <X />
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
+					<p>Forme grupos de 4 palavras que tenham algo em comum.</p>
+					<p>
+						Clique em uma palavra para selecioná-la. Se precisar, você pode clicar
+						novamente para desselecionar.
+					</p>
+					<p>
+						Assim que você selecionar 4 palavras o jogo irá automaticamente conferir se
+						o grupo está correto.
+					</p>
+					<p>Se estiver correto, a categoria será revelada. Senão, tente novamente.</p>
+					<p>Descubra os 4 grupos.</p>
+
+					<button onClick={() => setShowHelp(false)}>
+						<X />
+					</button>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Play;
