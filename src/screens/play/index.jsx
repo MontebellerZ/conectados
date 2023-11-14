@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle, X } from "react-feather";
 import seedrandom from "seedrandom";
 
-const groupColors = ["#c2410c", "#047857", "#0e7490", "#6d28d9"];
-
 const getRandomOrder = (lvl, seed) => {
     const pseudoRandom = seedrandom(seed);
 
