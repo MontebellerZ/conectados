@@ -65,13 +65,12 @@
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 0.4em;
+	grid-template-rows: repeat(4, 1fr);
+	gap: 0.5em;
 }
 
 #play #game #board .card {
 	overflow: hidden;
-	width: 100%;
-	height: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -81,7 +80,7 @@
 	outline: 0px;
 	cursor: pointer;
 	text-transform: uppercase;
-	height: 6em;
+	aspect-ratio: 16/11;
 	padding: 0.5em;
 	font-size: 1em;
 	box-sizing: border-box;
@@ -104,12 +103,26 @@
 	border-radius: 0.4em;
 	border: 0px;
 	outline: 0px;
-	cursor: pointer;
-	min-height: 5em;
-	text-transform: uppercase;
-	padding: 0.3em;
-	font-size: 0.9em;
+	font-size: 1em;
 	grid-column: 1/5;
+	gap: 0.3em;
+	overflow: hidden;
+	padding: 0.5em;
+	box-sizing: border-box;
+}
+
+#play #game #board .box p {
+	margin: 0px;
+}
+
+#play #game #board .box p:first-of-type {
+	font-weight: 900;
+	text-transform: capitalize;
+}
+
+#play #game #board .box p:last-of-type {
+	text-transform: uppercase;
+	font-weight: 400;
 }
 
 #play #game #board .box.box1 {

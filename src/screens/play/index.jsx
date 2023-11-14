@@ -89,8 +89,12 @@ function Play() {
 
 						return (
 							<div key={i} className={classname}>
-								<p>{box.group}</p>
-								<p>{box.words.join(", ")}</p>
+								<p>
+									<TextFit>{box.group}</TextFit>
+								</p>
+								<p>
+									<TextFit>{box.words.join(", ")}</TextFit>
+								</p>
 							</div>
 						);
 					})}
