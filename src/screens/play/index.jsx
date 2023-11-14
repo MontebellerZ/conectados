@@ -5,6 +5,7 @@ import { getLvl } from "../../data";
 import { Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle, X } from "react-feather";
 import seedrandom from "seedrandom";
+import TextFit from "../../components/textFit";
 
 const getRandomOrder = (lvl, seed) => {
 	const pseudoRandom = seedrandom(seed);
@@ -126,7 +127,7 @@ function Play() {
 
 						return (
 							<button key={i} onClick={handleSelect} className={classname}>
-								{card.word}
+								<TextFit>{card.word}</TextFit>
 							</button>
 						);
 					})}
