@@ -4,8 +4,10 @@ import { useParams } from "react-router";
 import { getLvl } from "../../data";
 import { Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle, X } from "react-feather";
+import { motion } from "framer-motion";
 import seedrandom from "seedrandom";
 import TextFit from "../../components/textFit";
+import AnimatedGrid from "../../components/animatedGrid";
 
 const getRandomOrder = (lvl, seed) => {
     const pseudoRandom = seedrandom(seed);
@@ -31,28 +33,49 @@ function Play() {
     const lvl = useMemo(() => getLvl(id), [id]);
 
     const [showHelp, setShowHelp] = useState(false);
-    const [tries, setTries] = useState(0);
+    const [tries, setTries] = useState([]);
 
     const [found, setFound] = useState([]);
     const [selected, setSelected] = useState([]);
+    const [wrong, setWrong] = useState([]);
+    const [correct, setCorrect] = useState([]);
 
-    const randomOrder = useMemo(() => getRandomOrder(lvl, id), [lvl, id]);
+    const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
 
     const checkSelected = (selected) => {
         const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
+        const groupIndex = allSameGroup ? selected[0].groupIndex : null;
 
         setSelected([]);
+        setTries((t) => [...t, { selected, groupIndex }]);
 
         if (allSameGroup) {
             const foundGroup = {
                 ...lvl.find((group) => group.group === selected[0].group),
-                groupIndex: selected[0].groupIndex,
+                groupIndex,
             };
 
-            setFound([...found, foundGroup]);
-        }
+            const orderSelected = selected.sort(
+                (a, b) =>
+                    foundGroup.words.findIndex((w) => w === a.word) -
+                    foundGroup.words.findIndex((w) => w === b.word)
+            );
 
-        setTries((t) => t + 1);
+            setCorrect(orderSelected);
+
+            const unfoundedItems = randomOrder.filter((rnd) => !orderSelected.includes(rnd));
+
+            const newOrder = [...orderSelected, ...unfoundedItems];
+            setRandomOrder(newOrder);
+
+            setTimeout(() => {
+                setRandomOrder(unfoundedItems);
+                setFound([...found, foundGroup]);
+            }, 2000);
+        } else {
+            setWrong(selected);
+            setTimeout(() => setWrong([]), 2000);
+        }
     };
 
     const dateToday = new Date().toLocaleDateString();
@@ -77,64 +100,83 @@ function Play() {
                 <div className="settings">
                     <span className="gameID">{isDaily ? dateToday : `#${id}`}</span>
                     <span className="triesCounter">
-                        <span>TENTATIVAS:</span> <span>{tries}</span>
+                        <span>TENTATIVAS:</span> <span>{tries.length}</span>
                     </span>
                 </div>
 
                 <div id="board">
-                    {found.map((box, i) => {
-                        const classList = ["box", "box" + (box.groupIndex + 1)];
+                    <AnimatedGrid>
+                        {found.map((box) => {
+                            const classList = ["box", "box" + (box.groupIndex + 1)];
 
-                        const classname = classList.join(" ");
+                            const classname = classList.join(" ");
 
-                        return (
-                            <div key={i} className={classname}>
-                                <p>
-                                    <TextFit>{box.group}</TextFit>
-                                </p>
-                                <p>
-                                    <TextFit>{box.words.join(", ")}</TextFit>
-                                </p>
-                            </div>
-                        );
-                    })}
-                    {randomOrder.map((card, i) => {
-                        const handleSelect = () => {
-                            const newSelected = [...selected];
-
-                            const includedIndex = newSelected.findIndex(
-                                (sel) => sel.word === card.word
+                            return (
+                                <motion.div
+                                    key={box.group}
+                                    className={classname}
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    layout
+                                >
+                                    <p>
+                                        <TextFit>{box.group}</TextFit>
+                                    </p>
+                                    <p>
+                                        <TextFit>{box.words.join(", ")}</TextFit>
+                                    </p>
+                                </motion.div>
                             );
+                        })}
+                        {randomOrder.map((card) => {
+                            const handleSelect = () => {
+                                const newSelected = [...selected];
 
-                            if (includedIndex >= 0) {
-                                newSelected.splice(includedIndex, 1);
+                                const includedIndex = newSelected.findIndex(
+                                    (sel) => sel.word === card.word
+                                );
+
+                                if (includedIndex >= 0) {
+                                    newSelected.splice(includedIndex, 1);
+                                    setSelected(newSelected);
+                                } else {
+                                    newSelected.push(card);
+                                }
+
                                 setSelected(newSelected);
-                            } else {
-                                newSelected.push(card);
-                            }
 
-                            setSelected(newSelected);
+                                if (newSelected.length === 4) checkSelected(newSelected);
+                            };
 
-                            if (newSelected.length === 4) checkSelected(newSelected);
-                        };
+                            const groupClass = `card${card.groupIndex + 1}`;
+                            const isSelected = selected.find((sel) => sel.word === card.word);
+                            const isCorrect = correct.find((crct) => crct.word === card.word);
+                            const isWrong = wrong.find((wrg) => wrg.word === card.word);
 
-                        const isSelected = selected.find((sel) => sel.word === card.word);
-                        const isFound = found.find((fnd) => fnd.group === card.group);
+                            const classList = [
+                                "card",
+                                groupClass,
+                                isSelected ? "selected" : "",
+                                isCorrect ? "found" : "",
+                                isWrong ? "wrong" : "",
+                            ];
 
-                        const classList = [
-                            "card",
-                            isSelected ? "selected" : "",
-                            isFound ? "found" : "",
-                        ];
+                            const classname = classList.join(" ");
 
-                        const classname = classList.join(" ");
-
-                        return (
-                            <button key={i} onClick={handleSelect} className={classname}>
-                                <TextFit>{card.word}</TextFit>
-                            </button>
-                        );
-                    })}
+                            return (
+                                <motion.button
+                                    key={card.word}
+                                    onClick={handleSelect}
+                                    className={classname}
+                                    transition={{ duration: 1 }}
+                                    exit={{ scale: 0.5, opacity: 0 }}
+                                    layout
+                                >
+                                    <TextFit>{card.word}</TextFit>
+                                </motion.button>
+                            );
+                        })}
+                    </AnimatedGrid>
                 </div>
             </div>
 

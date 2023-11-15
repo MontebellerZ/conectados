@@ -1,202 +1,251 @@
 #play {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	justify-content: center;
-	height: 90%;
-	gap: 1.6em;
-	max-width: 500px;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    height: 90%;
+    gap: 1.6em;
+    max-width: 500px;
+    width: 100%;
 }
 
 #play #header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1em;
-	text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: center;
 }
 
 #play #header h1 {
-	flex: 1;
-	margin: 0px;
-	font-size: 1.8em;
+    flex: 1;
+    margin: 0px;
+    font-size: 1.8em;
 }
 
 #play #header button {
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	outline: 0px;
-	background-color: #0000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    background-color: #0000;
 }
 
 #play #game {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	justify-content: flex-start;
-	gap: 0.7em;
-	width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.7em;
+    width: 100%;
 }
 
 #play #game .settings {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 1em;
-	font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    font-size: 0.9em;
 }
 
 #play #game .settings .gameID {
-	font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 #play #game .settings .triesCounter span:first-of-type {
-	font-weight: 400;
+    font-weight: 400;
 }
 
 #play #game #board {
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-	gap: 0.5em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5em;
+	user-select: none;
 }
 
 #play #game #board .card {
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color2);
-	border-radius: 0.4em;
-	border: 0px;
-	outline: 0px;
-	cursor: pointer;
-	text-transform: uppercase;
-	aspect-ratio: 16/11;
-	padding: 0.5em;
-	font-size: 1em;
-	box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    border-radius: 0.4em;
+    border: 0px;
+    outline: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    aspect-ratio: 16/11;
+    padding: 0.5em;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: 0.1s ease;
+}
+
+#play #game #board .card:active {
+    transform: scale(0.9);
 }
 
 #play #game #board .card.selected {
-	background-color: var(--color4);
+    background-color: var(--color4);
+}
+
+@keyframes jump-and-go {
+    10% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    1000% {
+        transform: scale(1);
+    }
 }
 
 #play #game #board .card.found {
-	display: none;
+    animation: jump-and-go 1s ease forwards;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(3deg);
+    }
+    40% {
+        transform: rotate(-3deg);
+    }
+    60% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#play #game #board .card.wrong {
+    border: 0.2em solid var(--color7);
+    background-color: #0000;
+    animation: swing 1s linear;
 }
 
 #play #game #board .box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: var(--color2);
-	border-radius: 0.4em;
-	border: 0px;
-	outline: 0px;
-	font-size: 1em;
-	grid-column: 1/5;
-	gap: 0.3em;
-	overflow: hidden;
-	padding: 0.5em;
-	box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    border-radius: 0.4em;
+    border: 0px;
+    outline: 0px;
+    font-size: 1em;
+    grid-column: 1/5;
+    gap: 0.3em;
+    overflow: hidden;
+    padding: 0.5em;
+    box-sizing: border-box;
 }
 
 #play #game #board .box p {
-	margin: 0px;
+    margin: 0px;
 }
 
 #play #game #board .box p:first-of-type {
-	font-weight: 900;
-	text-transform: capitalize;
+    font-weight: 900;
+    text-transform: capitalize;
 }
 
 #play #game #board .box p:last-of-type {
-	text-transform: uppercase;
-	font-weight: 400;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
-#play #game #board .box.box1 {
-	background-color: var(--group1-color);
+#play #game #board .box.box1,
+#play #game #board .card.found.card1 {
+    background-color: var(--group1-color);
 }
-#play #game #board .box.box2 {
-	background-color: var(--group2-color);
+#play #game #board .box.box2,
+#play #game #board .card.found.card2 {
+    background-color: var(--group2-color);
 }
-#play #game #board .box.box3 {
-	background-color: var(--group3-color);
+#play #game #board .box.box3,
+#play #game #board .card.found.card3 {
+    background-color: var(--group3-color);
 }
-#play #game #board .box.box4 {
-	background-color: var(--group4-color);
+#play #game #board .box.box4,
+#play #game #board .card.found.card4 {
+    background-color: var(--group4-color);
 }
 
 #play #modal {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #play #modal.hide {
-	display: none;
+    display: none;
 }
 
 #play #modal #help {
-	max-width: min(90%, 30em);
-	position: relative;
-	background-color: var(--color2);
-	padding: 1.4em 1.7em;
-	border: 0.2em solid #fff;
-	border-radius: 0.8em;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	justify-content: center;
-	gap: 1em;
+    max-width: min(90%, 30em);
+    position: relative;
+    background-color: var(--color2);
+    padding: 1.4em 1.7em;
+    border: 0.2em solid #fff;
+    border-radius: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1em;
 }
 
 #play #modal #help div {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 0.6em;
-	font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6em;
+    font-size: 1.3em;
 }
 
 #play #modal #help p {
-	margin: 0px;
-	font-weight: 400;
+    margin: 0px;
+    font-weight: 400;
 }
 
 #play #modal #help button {
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(50%, -50%);
-	background-color: #0000;
-	border: 0.2em solid #fff;
-	outline: 0px;
-	border-radius: 1000px;
-	background-color: var(--color2);
-	padding: 0.2em;
-	margin: 0px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #0000;
+    border: 0.2em solid #fff;
+    outline: 0px;
+    border-radius: 1000px;
+    background-color: var(--color2);
+    padding: 0.2em;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: inherit;
 }
