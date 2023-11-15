@@ -1,13 +1,13 @@
 import "./styles.css";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router";
-import { getLvl } from "../../data";
+import { GROUPS_PER_LEVEL, getLvl, getLvlDone, winLvl } from "../../data";
 import { Link } from "react-router-dom";
 import { ArrowLeft, HelpCircle, X } from "react-feather";
 import { motion } from "framer-motion";
 import seedrandom from "seedrandom";
 import TextFit from "../../components/textFit";
-import AnimatedGrid from "../../components/animatedGrid";
+import AnimatedDiv from "../../components/animatedGrid";
 
 const getRandomOrder = (lvl, seed) => {
     const pseudoRandom = seedrandom(seed);
@@ -31,30 +31,30 @@ function Play() {
     const { id } = useParams();
 
     const lvl = useMemo(() => getLvl(id), [id]);
+    const lvlDone = useMemo(() => getLvlDone(id), [id]);
 
     const [showHelp, setShowHelp] = useState(false);
-    const [tries, setTries] = useState([]);
+    const [tries, setTries] = useState(lvlDone ? lvlDone.tries : []);
 
-    const [found, setFound] = useState([]);
+    const [found, setFound] = useState(lvlDone ? lvlDone.found : []);
     const [selected, setSelected] = useState([]);
     const [wrong, setWrong] = useState([]);
     const [correct, setCorrect] = useState([]);
 
-    const [randomOrder, setRandomOrder] = useState(getRandomOrder(lvl, id));
+    const [randomOrder, setRandomOrder] = useState(lvlDone ? [] : getRandomOrder(lvl, id));
 
     const checkSelected = (selected) => {
         const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
         const groupIndex = allSameGroup ? selected[0].groupIndex : null;
 
+        const foundGroup = allSameGroup
+            ? { ...lvl.find((group) => group.group === selected[0].group), groupIndex }
+            : null;
+
         setSelected([]);
-        setTries((t) => [...t, { selected, groupIndex }]);
+        setTries((t) => [...t, foundGroup]);
 
         if (allSameGroup) {
-            const foundGroup = {
-                ...lvl.find((group) => group.group === selected[0].group),
-                groupIndex,
-            };
-
             const orderSelected = selected.sort(
                 (a, b) =>
                     foundGroup.words.findIndex((w) => w === a.word) -
@@ -82,6 +82,14 @@ function Play() {
 
     const isDaily = dateToday.replace(/\//g, "") === id;
 
+    const win = useMemo(() => found.length === GROUPS_PER_LEVEL, [found]);
+
+    useEffect(() => {
+        if (!win) return;
+
+        winLvl(id, tries);
+    }, [win, id, tries]);
+
     return (
         <div id="play">
             <div id="header">
@@ -105,7 +113,7 @@ function Play() {
                 </div>
 
                 <div id="board">
-                    <AnimatedGrid>
+                    <AnimatedDiv>
                         {found.map((box) => {
                             const classList = ["box", "box" + (box.groupIndex + 1)];
 
@@ -119,12 +127,8 @@ function Play() {
                                     animate={{ opacity: 1, scale: 1 }}
                                     layout
                                 >
-                                    <p>
-                                        <TextFit>{box.group}</TextFit>
-                                    </p>
-                                    <p>
-                                        <TextFit>{box.words.join(", ")}</TextFit>
-                                    </p>
+                                    <TextFit>{box.group}</TextFit>
+                                    <TextFit>{box.words.join(", ")}</TextFit>
                                 </motion.div>
                             );
                         })}
@@ -168,7 +172,6 @@ function Play() {
                                     key={card.word}
                                     onClick={handleSelect}
                                     className={classname}
-                                    transition={{ duration: 1 }}
                                     exit={{ scale: 0.5, opacity: 0 }}
                                     layout
                                 >
@@ -176,7 +179,7 @@ function Play() {
                                 </motion.button>
                             );
                         })}
-                    </AnimatedGrid>
+                    </AnimatedDiv>
                 </div>
             </div>
 
@@ -197,7 +200,7 @@ function Play() {
                         o grupo está correto.
                     </p>
                     <p>Se estiver correto, a categoria será revelada. Senão, tente novamente.</p>
-                    <p>Descubra os 4 grupos.</p>
+                    <p>Descubra os {GROUPS_PER_LEVEL} grupos.</p>
 
                     <button onClick={() => setShowHelp(false)}>
                         <X />
@@ -209,4 +212,3 @@ function Play() {
 }
 
 export default Play;
-//

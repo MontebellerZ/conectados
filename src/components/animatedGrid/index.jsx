@@ -1,6 +1,6 @@
 import { AnimatePresence, LayoutGroup } from "framer-motion";
 
-function AnimatedGrid({ children }) {
+function AnimatedDiv({ children }) {
     return (
         <AnimatePresence initial={false}>
             <LayoutGroup>{children}</LayoutGroup>
@@ -8,4 +8,4 @@ function AnimatedGrid({ children }) {
     );
 }
 
-export default AnimatedGrid;
+export default AnimatedDiv;

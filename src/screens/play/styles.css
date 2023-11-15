@@ -67,7 +67,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 0.5em;
-	user-select: none;
+    user-select: none;
 }
 
 #play #game #board .card {
@@ -103,7 +103,7 @@
     60% {
         transform: scale(1.1);
     }
-    1000% {
+    100% {
         transform: scale(1);
     }
 }
@@ -154,18 +154,19 @@
     overflow: hidden;
     padding: 0.5em;
     box-sizing: border-box;
+    text-align: center;
 }
 
-#play #game #board .box p {
+#play #game #board .box > div {
     margin: 0px;
 }
 
-#play #game #board .box p:first-of-type {
+#play #game #board .box > div:first-of-type {
     font-weight: 900;
     text-transform: capitalize;
 }
 
-#play #game #board .box p:last-of-type {
+#play #game #board .box > div:last-of-type {
     text-transform: uppercase;
     font-weight: 400;
 }
