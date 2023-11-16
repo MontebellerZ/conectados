@@ -49,6 +49,19 @@ const getSequence = (tries) => {
 		.join(" ");
 };
 
+const getToday = () => {
+	const today = new Date();
+
+	const d = today.getDate().toString().padStart(2, "0");
+	const m = (today.getMonth() + 1).toString().padStart(2, "0");
+	const y = today.getFullYear().toString().padStart(4, "0");
+
+	return {
+		seed: y + m + d,
+		label: today.toLocaleDateString(),
+	};
+};
+
 function Play() {
 	const { id } = useParams();
 
@@ -67,15 +80,18 @@ function Play() {
 	const [randomOrder, setRandomOrder] = useState(lvlDone ? [] : getRandomOrder(lvl, id));
 
 	const win = useMemo(() => found.length === GROUPS_PER_LEVEL, [found]);
-	const dateToday = useMemo(() => new Date().toLocaleDateString(), []);
-	const isDaily = useMemo(() => dateToday.replace(/\//g, "") === id, [id, dateToday]);
+	const dateToday = useMemo(() => getToday(), []);
+	const isDaily = useMemo(() => dateToday.seed === id, [id, dateToday]);
 	const isDevice = useMemo(() => DEVICE_AGENTS.test(navigator.userAgent), []);
 	const isFirefox = useMemo(
 		() => navigator.userAgent.toLowerCase().indexOf("firefox") !== -1,
 		[]
 	);
 
-	const gameIdText = useMemo(() => (isDaily ? dateToday : `#${id}`), [isDaily, dateToday, id]);
+	const gameIdText = useMemo(
+		() => (isDaily ? dateToday.label : `#${id}`),
+		[isDaily, dateToday, id]
+	);
 	const sequence = useMemo(() => getSequence(tries), [tries]);
 
 	const checkSelected = (selected) => {
