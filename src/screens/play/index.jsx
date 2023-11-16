@@ -114,9 +114,7 @@ function Play() {
 	};
 
 	const handleShare = async () => {
-		const resultText = `Joguei Conectados ${gameIdText} e consegui em ${tries.length} tentativas.\n\n${sequence}\n\nJogue também em: https://montebellerz.github.io/conectados/`;
-
-		console.log(navigator.share);
+		const resultText = `Joguei Conectados ${gameIdText} e consegui em ${tries.length} tentativas.\n\n${sequence}\n\nJogue também em: montebellerz.github.io/conectados/`;
 
 		if (isDevice && !isFirefox && navigator.share) {
 			await navigator.share({ text: resultText });
