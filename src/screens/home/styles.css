@@ -4,7 +4,7 @@
     align-items: stretch;
     justify-content: flex-start;
     gap: 1.5em;
-    height: 90%;
+    height: 100%;
     text-align: center;
 }
 
@@ -23,7 +23,6 @@
 #home .card {
     display: flex;
     align-items: center;
-    gap: 1em;
     justify-content: space-between;
     font-size: 1.1em;
     padding: 0.6em;
