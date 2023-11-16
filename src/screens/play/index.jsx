@@ -10,6 +10,8 @@ import seedrandom from "seedrandom";
 import TextFit from "../../components/textFit";
 import AnimatedDiv from "../../components/animatedGrid";
 
+const DEVICE_AGENTS = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+
 const getRandomOrder = (lvl, seed) => {
 	const pseudoRandom = seedrandom(seed);
 
@@ -28,6 +30,25 @@ const getRandomOrder = (lvl, seed) => {
 	return allWords;
 };
 
+const getSequence = (tries) => {
+	return tries
+		.map((t) => {
+			switch (t?.groupIndex) {
+				case 0:
+					return "🟧";
+				case 1:
+					return "🟩";
+				case 2:
+					return "🟦";
+				case 3:
+					return "🟪";
+				default:
+					return "❌";
+			}
+		})
+		.join("");
+};
+
 function Play() {
 	const { id } = useParams();
 
@@ -35,8 +56,9 @@ function Play() {
 	const lvlDone = useMemo(() => getLvlDone(id), [id]);
 
 	const [showHelp, setShowHelp] = useState(false);
-	const [tries, setTries] = useState(lvlDone ? lvlDone.tries : []);
+	const [shareText, setShareText] = useState("Compartilhe");
 
+	const [tries, setTries] = useState(lvlDone ? lvlDone.tries : []);
 	const [found, setFound] = useState(lvlDone ? lvlDone.found : []);
 	const [selected, setSelected] = useState([]);
 	const [wrong, setWrong] = useState([]);
@@ -45,10 +67,15 @@ function Play() {
 	const [randomOrder, setRandomOrder] = useState(lvlDone ? [] : getRandomOrder(lvl, id));
 
 	const win = useMemo(() => found.length === GROUPS_PER_LEVEL, [found]);
+	const dateToday = useMemo(() => new Date().toLocaleDateString(), []);
+	const isDaily = useMemo(() => dateToday.replace(/\//g, "") === id, [id, dateToday]);
+	const isDevice = useMemo(() => DEVICE_AGENTS.test(navigator.userAgent), [navigator.userAgent]);
+	const isFirefox = useMemo(
+		() => navigator.userAgent.toLowerCase().indexOf("firefox") !== -1,
+		[navigator.userAgent]
+	);
 
-	const dateToday = new Date().toLocaleDateString();
-
-	const isDaily = dateToday.replace(/\//g, "") === id;
+	const sequence = useMemo(() => getSequence(tries), [tries]);
 
 	const checkSelected = (selected) => {
 		const allSameGroup = selected.every((sel) => sel.group === selected[0].group);
@@ -85,7 +112,19 @@ function Play() {
 		}
 	};
 
-	const handleShare = () => {};
+	const handleShare = async () => {
+		const resultText = `Joguei conexo.ws 16/11/2023 e consegui em ${tries.length} tentativas.\n\n${sequence}`;
+
+		if (isDevice && !isFirefox && navigator.share) {
+			await navigator.share({ resultText });
+			setShareText("Compartilhado!");
+		} else {
+			await navigator.clipboard.writeText(resultText);
+			setShareText("Copiado!");
+		}
+
+		setTimeout(() => setSharing("Compartilhe"), 2000);
+	};
 
 	useEffect(() => {
 		if (!win) return;
@@ -125,27 +164,11 @@ function Play() {
 					Você conseguiu em <b>{tries.length}</b> tentativas.
 				</p>
 
-				<p>
-					{tries.map((t) => {
-						console.log(t?.groupIndex);
-
-						switch (t?.groupIndex) {
-							case 0:
-								return "🟨";
-							case 1:
-								return "🟩";
-							case 2:
-								return "🟦";
-							case 3:
-								return "🟪";
-							default:
-								return "❌";
-						}
-					})}
-				</p>
+				<p>{sequence}</p>
 
 				<button onClick={handleShare}>
-					<AiOutlineShareAlt /> <span>Compartilhe</span>
+					<AiOutlineShareAlt />
+					<span>{shareText}</span>
 				</button>
 			</motion.div>
 
