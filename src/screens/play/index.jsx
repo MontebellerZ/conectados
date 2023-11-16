@@ -75,6 +75,7 @@ function Play() {
 		[navigator.userAgent]
 	);
 
+	const gameIdText = useMemo(() => (isDaily ? dateToday : `#${id}`), [isDaily, dateToday, id]);
 	const sequence = useMemo(() => getSequence(tries), [tries]);
 
 	const checkSelected = (selected) => {
@@ -113,7 +114,7 @@ function Play() {
 	};
 
 	const handleShare = async () => {
-		const resultText = `Joguei conexo.ws 16/11/2023 e consegui em ${tries.length} tentativas.\n\n${sequence}`;
+		const resultText = `Joguei Conectados ${gameIdText} e consegui em ${tries.length} tentativas.\n\n${sequence}\n\nJogue também em: https://montebellerz.github.io/conectados/`;
 
 		if (isDevice && !isFirefox && navigator.share) {
 			await navigator.share({ resultText });
@@ -174,7 +175,7 @@ function Play() {
 
 			<div id="game">
 				<div className="settings">
-					<span className="gameID">{isDaily ? dateToday : `#${id}`}</span>
+					<span className="gameID">{gameIdText}</span>
 					<span className="triesCounter">
 						<span>TENTATIVAS:</span> <span>{tries.length}</span>
 					</span>
