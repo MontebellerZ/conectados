@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import seedrandom from "seedrandom";
 import TextFit from "../../components/textFit";
 import AnimatedDiv from "../../components/animatedGrid";
+import getToday from "../../utils/getToday";
 
 const DEVICE_AGENTS = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 
@@ -47,19 +48,6 @@ const getSequence = (tries) => {
 			}
 		})
 		.join(" ");
-};
-
-const getToday = () => {
-	const today = new Date();
-
-	const d = today.getDate().toString().padStart(2, "0");
-	const m = (today.getMonth() + 1).toString().padStart(2, "0");
-	const y = today.getFullYear().toString().padStart(4, "0");
-
-	return {
-		seed: y + m + d,
-		label: today.toLocaleDateString(),
-	};
 };
 
 function Play() {
