@@ -2,12 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
-	justify-content: center;
+	justify-content: flex-start;
 	height: 100%;
-	gap: 1.6em;
 	max-width: 500px;
 	width: 100%;
 	overflow: auto;
+	padding: 1em;
 }
 
 #play #header {
@@ -37,6 +37,7 @@
 }
 
 #play #result {
+	margin: 1.6em 0px;
 	align-self: center;
 	display: flex;
 	flex-direction: column;
@@ -48,14 +49,13 @@
 	padding: 1em;
 	border-radius: 0.5em;
 	box-sizing: border-box;
-	overflow: hidden;
 	font-weight: 400;
 }
 
 #play #result p {
 	margin: 0px;
 	padding: 0px;
-    font-size: 1.1em;
+	font-size: 1.1em;
 }
 
 #play #result b {
@@ -114,6 +114,7 @@
 }
 
 #play #game #board .card {
+	overflow: hidden;
 	display: flex;
 	align-items: center;
 	justify-content: center;

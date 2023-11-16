@@ -18,7 +18,6 @@ body {
     color: #fff;
     font-family: Nunito, sans-serif;
     font-weight: 600;
-    padding: 1em !important;
     display: flex;
     flex-direction: column;
     align-items: center;

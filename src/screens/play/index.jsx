@@ -46,7 +46,7 @@ const getSequence = (tries) => {
 					return "❌";
 			}
 		})
-		.join("");
+		.join(" ");
 };
 
 function Play() {
@@ -148,11 +148,11 @@ function Play() {
 			</div>
 
 			<motion.div
-				id="result"
 				initial="hide"
+				id="result"
 				variants={{
-					show: { maxHeight: "100%", padding: "1em" },
-					hide: { maxHeight: "0%", padding: "0em" },
+					show: { transform: "scale(1)", maxHeight: "100%" },
+					hide: { transform: "scale(0)", maxHeight: "0%" },
 				}}
 				animate={win ? "show" : "hide"}
 				layout
