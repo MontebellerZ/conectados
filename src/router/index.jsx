@@ -4,7 +4,7 @@ import Play from "../screens/play";
 
 function RouterManager() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.DEV ? "/" : "/conectados/"}>
             <Routes>
                 <Route index element={<Home />} />
                 <Route path="/play" element={<Play />} />
