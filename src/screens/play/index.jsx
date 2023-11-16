@@ -124,7 +124,7 @@ function Play() {
 			setShareText("Copiado!");
 		}
 
-		setTimeout(() => setSharing("Compartilhe"), 2000);
+		setTimeout(() => setShareText("Compartilhe"), 2000);
 	};
 
 	useEffect(() => {
