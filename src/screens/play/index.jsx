@@ -100,16 +100,18 @@ function Play() {
 					foundGroup.words.findIndex((w) => w === b.word)
 			);
 
-			setCorrect(orderSelected);
+			setCorrect((crt) => [...crt, orderSelected]);
 
 			const unfoundedItems = randomOrder.filter((rnd) => !orderSelected.includes(rnd));
 
-			const newOrder = [...orderSelected, ...unfoundedItems];
-			setRandomOrder(newOrder);
+			setRandomOrder(unfoundedItems);
 
 			setTimeout(() => {
-				setRandomOrder(unfoundedItems);
-				setFound([...found, foundGroup]);
+				setFound((found) => [...found, foundGroup]);
+				setCorrect((crt) => {
+					const [_, ...newCrt] = crt;
+					return newCrt;
+				});
 			}, 2000);
 		} else {
 			setWrong(selected);
@@ -205,6 +207,26 @@ function Play() {
 								</motion.div>
 							);
 						})}
+						{correct.flatMap((crtGroup) =>
+							crtGroup.map((crt) => {
+								const groupClass = `card${crt.groupIndex + 1}`;
+
+								const classList = ["card", "found", groupClass];
+
+								const classname = classList.join(" ");
+
+								return (
+									<motion.button
+										key={crt.word}
+										className={classname}
+										exit={{ scale: 0.5, opacity: 0 }}
+										layout
+									>
+										<TextFit>{crt.word}</TextFit>
+									</motion.button>
+								);
+							})
+						)}
 						{randomOrder.map((card) => {
 							const handleSelect = () => {
 								const newSelected = [...selected];
@@ -227,14 +249,12 @@ function Play() {
 
 							const groupClass = `card${card.groupIndex + 1}`;
 							const isSelected = selected.find((sel) => sel.word === card.word);
-							const isCorrect = correct.find((crct) => crct.word === card.word);
 							const isWrong = wrong.find((wrg) => wrg.word === card.word);
 
 							const classList = [
 								"card",
 								groupClass,
 								isSelected ? "selected" : "",
-								isCorrect ? "found" : "",
 								isWrong ? "wrong" : "",
 							];
 
